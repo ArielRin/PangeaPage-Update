@@ -41,7 +41,7 @@ Our team includes experienced professionals passionate about blockchain and cryp
 - **Matt**
 
 ## Footer
-Pangea symbolizes unity and connection, derived from ancient Greek, meaning "all, entire, whole" and "Mother Earth, land".
+Pangea symbolizes unity and connection, derived from ancient Greek, meaning "all, entire, whole" and "Mother Earth, land". Pangea derives its name from a massive, singular landmass that existed many centuries ago, encompassing the entire earth's land area.
 
 ## Socials and Links
 - [Telegram](https://t.me/PangeaLasVegasPRT)
