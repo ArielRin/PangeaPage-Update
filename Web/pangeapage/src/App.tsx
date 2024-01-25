@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import "./styles/Home.css";
 
 const TOKEN_ADDRESS = '0xd8b9e0993fce7d05b3f11d828cf52d17637142ca '; //og pangea ca
-// import abiFile from './abiFile.json';
+import abiFile from './abiFile.json';
 
 
 export default function Home() {
@@ -53,6 +53,15 @@ export default function Home() {
            Current Price of $PRT: {tokenPriceUSD}
         </p>
         </div>
+
+                  <div className="connect">
+                    <ConnectWallet
+                      dropdownPosition={{
+                        side: "bottom",
+                        align: "center",
+                      }}
+                    />
+                  </div>
 
         <div className="links">
           <p><a href="https://pancakeswap.finance/swap?outputCurrency=0xd8b9e0993fce7d05b3f11d828cf52d17637142ca&chainId=56"
@@ -165,15 +174,3 @@ export default function Home() {
     </main>
   );
 }
-
-
-
-          //
-          // <div className="connect">
-          //   <ConnectWallet
-          //     dropdownPosition={{
-          //       side: "bottom",
-          //       align: "center",
-          //     }}
-          //   />
-          // </div>
