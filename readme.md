@@ -1,4 +1,51 @@
-project: Site update to pangea las vegas
+
+# Pangea Las Vegas Lounge
+
+## Introduction
+Welcome to the [Pangea Las Vegas Lounge](https://pangealasvegas.com/#/home). Our platform introduces a unique token that grants exclusive benefits to its holders. Enjoy the rewards of our Ama Lounge NFT Token with 9% BNB Rewards and low taxes.
+
+### Contract Address
+`0xd8b9e0993fce7d05b3f11d828cf52d17637142ca`
+
+[Buy Token](https://pancakeswap.finance/swap?outputCurrency=0xd8b9e0993fce7d05b3f11d828cf52d17637142ca&chainId=56)
+
+[Mint NFT](https://pangealasvegas.com/#/main/mint)
+
+## About
+At Ama Lounge, we offer a unique token providing substantial returns, including an extra 1% reward in BNB on every sell transaction, with an overall 9% reward in BNB.
+
+## Tokenomics
+- **Buys:** 6% (4% in BNB rewards, 1% to liquidity, 1% to buyback and burn)
+- **Sells:** 7% (4% in BNB rewards, 1% to NFT holders, 1% to liquidity, 1% to buyback and burn)
+
+## NFTs
+Our NFT collection features a majestic falcon atop the globe. Holders enjoy rewards and exclusive VIP experiences.
+
+## Partners
+Together, we aim to achieve great things in the realm of blockchain and cryptocurrency.
+
+## Team
+Our team includes experienced professionals passionate about blockchain and cryptocurrency.
+
+- **Greg**
+- **Matt**
+
+## Footer
+Pangea symbolizes unity and connection, derived from ancient Greek, meaning "all, entire, whole" and "Mother Earth, land".
+
+## Socials and Links
+- [Telegram](https://t.me/PangeaLasVegasPRT)
+- [X](https://x.com/official92676?t=zCKg5fW5RcTPwp0EaLQbDg&s=09)
+- [GitHub Repository](https://github.com/ArielRin/PangeaPage-Update)
+
+![Token Logo](https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/token1.jpg)
+
+![Social Logo](https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/2024-01-25%2018.06.40.jpg)
+
+
+
+
+## Raw text from site
 - godaddy hosted domain
 
 
@@ -44,6 +91,7 @@ Site Current Contents
 - Introduction
 - About
 - Tokenomice
+- NFTS
 - Partners
 - Team
 - Footer
@@ -90,4 +138,28 @@ Copyright © 2023 Pangea Las Vegas | All Rights Reserved.
 Socials
 Telegram : https://t.me/PangeaLasVegasPRT
 X : https://x.com/official92676?t=zCKg5fW5RcTPwp0EaLQbDg&s=09
+
+
+## Start on updating page
+Contract: 0xd8b9e0993fce7d05b3f11d828cf52d17637142ca
+Buy Token Link PCS: https://pancakeswap.finance/swap?outputCurrency=0xd8b9e0993fce7d05b3f11d828cf52d17637142ca&chainId=56
+Add LP Link PCS: https://pancakeswap.finance/v2/add/BNB/0xd8b9e0993fce7d05b3f11d828cf52d17637142ca
+Mint NFTS: https://pangealasvegas.com/#/main/mint
+Swapper Address: ??
+Token logo will be: https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/token1.jpg
+
+Telegram : https://t.me/PangeaLasVegasPRT
+X : https://x.com/official92676?t=zCKg5fW5RcTPwp0EaLQbDg&s=09
 Git: https://github.com/ArielRin/PangeaPage-Update (this)
+
+
+- Introduction
+- About
+- Why
+- Tokenomice
+- Buy add lp and Swapper link
+- Partners
+- benefits of AMA channel
+- Team
+- Footer
+- socials
