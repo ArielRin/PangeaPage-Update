@@ -4,43 +4,25 @@ import React, { useEffect, useState } from 'react';
 import "./styles/Home.css";
 
 const TOKEN_ADDRESS = '0xd8b9e0993fce7d05b3f11d828cf52d17637142ca '; //og pangea ca
-import abiFile from './abiFile.json';
-
+// import abiFile from './abiFile.json';
+const INITIAL_SUPPLY = 1000000; // Initial supply set at 1,000,000
 
 export default function Home() {
 
 
-//fetch token pricePerToken in usd PRT
-// ##############################################################
-// ##############################################################
-  const [tokenPriceUSD, setTokenPriceUSD] = useState('Loading...');
-    const tokenAddress = '0xd8b9e0993fce7d05b3f11d828cf52d17637142ca'; // token address for pricefeed
-
-    useEffect(() => {
-      const url = `https://api.geckoterminal.com/api/v2/simple/networks/bsc/token_price/${tokenAddress}`;
-
-      fetch(url)
-        .then(response => response.json())
-        .then(data => {
-          if (data && data.data && data.data.attributes && data.data.attributes.token_prices) {
-            const price = data.data.attributes.token_prices[tokenAddress];
-            setTokenPriceUSD(`${parseFloat(price).toFixed(6)} USD`); // Format the price to 6 decimal places
-          } else {
-            setTokenPriceUSD('Price not available');
-          }
-        })
-        .catch(error => {
-          console.error('Error fetching token price:', error);
-          setTokenPriceUSD('Error fetching price');
-        });
-    }, []);
-// ##############################################################
-// ##############################################################
-//
-
 
   return (
+
     <main className="main">
+      <nav className="navbar">
+        <ul className="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#tokenomics">Tokenomics</a></li>
+          <li><a href="#nft">NFT</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#buynow">Buy Now</a></li>
+        </ul>
+      </nav>
       <div className="container">
         <div className="header">
           <h1 className="title">
@@ -49,19 +31,10 @@ export default function Home() {
           <p className="description">
             Unlock rewards: Ama Lounge NFT token offers 9% BNB rewards with low taxes. Join now!
           </p>
-        <p className="descriptionsml">
-           Current Price of $PRT: {tokenPriceUSD}
-        </p>
+
+
         </div>
 
-                  <div className="connect">
-                    <ConnectWallet
-                      dropdownPosition={{
-                        side: "bottom",
-                        align: "center",
-                      }}
-                    />
-                  </div>
 
         <div className="links">
           <p><a href="https://pancakeswap.finance/swap?outputCurrency=0xd8b9e0993fce7d05b3f11d828cf52d17637142ca&chainId=56"
@@ -174,3 +147,14 @@ export default function Home() {
     </main>
   );
 }
+
+
+                  //
+                  // <div className="connect">
+                  //   <ConnectWallet
+                  //     dropdownPosition={{
+                  //       side: "bottom",
+                  //       align: "center",
+                  //     }}
+                  //   />
+                  // </div>
