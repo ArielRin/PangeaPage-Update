@@ -52,7 +52,7 @@ Introduction
 
 Contract Address: 0xd8b9e0993fce7d05b3f11d828cf52d17637142ca
 
-Maximize Rewards: Ama Lounge NFT Token with 9% BNB Rewards, Low Taxes 
+Maximize Rewards: Ama Lounge NFT Token with 9% BNB Rewards, Low Taxes
 Unlock rewards: Ama Lounge NFT token offers 9% BNB rewards with low taxes. Join now!
 
 Mint NFT
@@ -90,3 +90,4 @@ Copyright © 2023 Pangea Las Vegas | All Rights Reserved.
 Socials
 Telegram : https://t.me/PangeaLasVegasPRT
 X : https://x.com/official92676?t=zCKg5fW5RcTPwp0EaLQbDg&s=09
+Git: https://github.com/ArielRin/PangeaPage-Update (this)
