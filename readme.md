@@ -11,6 +11,12 @@ Welcome to the [Pangea Las Vegas Lounge](https://pangealasvegas.com/#/home). Our
 
 [Mint NFT](https://pangealasvegas.com/#/main/mint)
 
+[Add LP](https://pancakeswap.finance/v2/add/BNB/0xd8b9e0993fce7d05b3f11d828cf52d17637142ca)
+
+[Chart at Dexscreener](https://dexscreener.com/bsc/0xad80fdc107d983cd76bec153abc00ff00e3477de)
+
+
+
 ## About
 At Ama Lounge, we offer a unique token providing substantial returns, including an extra 1% reward in BNB on every sell transaction, with an overall 9% reward in BNB.
 
@@ -41,8 +47,7 @@ Pangea symbolizes unity and connection, derived from ancient Greek, meaning "all
 - [Telegram](https://t.me/PangeaLasVegasPRT)
 - [X](https://x.com/official92676?t=zCKg5fW5RcTPwp0EaLQbDg&s=09)
 - [GitHub Repository](https://github.com/ArielRin/PangeaPage-Update)
-
-![Token Logo](https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/token1.jpg)
+- [BSCSCAN](https://bscscan.com/token/0xd8b9e0993fce7d05b3f11d828cf52d17637142ca#code)
 
 ![Social Logo](https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/2024-01-25%2018.06.40.jpg)
 
