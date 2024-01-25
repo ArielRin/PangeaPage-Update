@@ -61,6 +61,13 @@
   font-size: 1.5rem;
 }
 
+.descriptionsml {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  font-size: 1.0rem;
+}
+
 .code {
   background: #555;
   border-radius: 5px;

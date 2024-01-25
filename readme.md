@@ -13,7 +13,7 @@ Welcome to the [Pangea Las Vegas Lounge](https://pangealasvegas.com/#/home). Our
 
 [Add LP](https://pancakeswap.finance/v2/add/BNB/0xd8b9e0993fce7d05b3f11d828cf52d17637142ca)
 
-[Dexscreener](https://dexscreener.com/bsc/0xad80fdc107d983cd76bec153abc00ff00e3477de)
+[Dex Screener](https://dexscreener.com/bsc/0xad80fdc107d983cd76bec153abc00ff00e3477de)
 
 
 

@@ -51,7 +51,9 @@ Introduction
 
 Contract Address: 0xd8b9e0993fce7d05b3f11d828cf52d17637142ca
 
-Maximize Rewards: Ama Lounge NFT Token with 9% BNB Rewards, Low Taxes Unlock rewards: Ama Lounge NFT token offers 9% BNB rewards with low taxes. Join now!
+Maximize Rewards: Ama Lounge NFT Token with 9% BNB Rewards, Low Taxes
+
+Unlock rewards: Ama Lounge NFT token offers 9% BNB rewards with low taxes. Join now!
 
 Mint NFT
 
@@ -65,7 +67,7 @@ NFTs NFT collection for Pangea Las Vegas Lounge features a majestic falcon atop 
 
 OUR PARTNERS Achieve Great Things Together!
 
-Team Achieve Great Things Together! The Pangea Las Vegas Token team consists of experienced professionals with a passion for blockchain and cryptocurrency. With a focus on transparency and community engagement, the team is dedicated to delivering the best possible user experience.
+Team  The Pangea Las Vegas Token team consists of experienced professionals with a passion for blockchain and cryptocurrency. With a focus on transparency and community engagement, the team is dedicated to delivering the best possible user experience.
 
 Greg Matt
 
