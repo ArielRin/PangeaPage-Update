@@ -5,7 +5,7 @@ import "./styles/Home.css";
 
 const TOKEN_ADDRESS = '0xd8b9e0993fce7d05b3f11d828cf52d17637142ca'; //og pangea ca
 // import abiFile from './abiFile.json';
-const TOKEN_IMAGE = './pangearnd.png';
+const TOKEN_IMAGE = 'https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Web/pangeapage/src/pangearnd.png';
 const TOKEN_SYMBOL = 'PRT';
 const TOKEN_DECIMALS = 18;
 
@@ -17,31 +17,32 @@ export default function Home() {
 // ##############################################################
 // ##############################################################
 const handleAddToken = () => {
-   if (window.ethereum) {
-     window.ethereum.request({
-       method: 'wallet_watchAsset',
-       params: {
-         type: 'ERC20',
-         options: {
-           address: TOKEN_ADDRESS,
-           symbol: TOKEN_SYMBOL,
-           decimals: TOKEN_DECIMALS,
-           image: TOKEN_IMAGE,
-         },
-       },
-     })
-     .then((success) => {
-       if (success) {
-         console.log('Token successfully added to wallet!');
-       } else {
-         console.log('Token not added to wallet.');
-       }
-     })
-     .catch(console.error);
-   } else {
-     console.log('MetaMask is not installed!');
-   }
- };
+  if (window.ethereum) {
+    window.ethereum.request({
+      method: 'wallet_watchAsset',
+      params: {
+        type: 'ERC20',
+        options: {
+          address: TOKEN_ADDRESS,
+          symbol: TOKEN_SYMBOL,
+          decimals: TOKEN_DECIMALS,
+          image: 'https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Web/pangeapage/src/pangearnd.png', // Replace with your public image URL
+        },
+      },
+    })
+    .then((success) => {
+      if (success) {
+        console.log('Token successfully added to wallet!');
+      } else {
+        console.log('Token not added to wallet.');
+      }
+    })
+    .catch(console.error);
+  } else {
+    console.log('MetaMask is not installed!');
+  }
+};
+
  // ##############################################################
  // ##############################################################
 
@@ -144,6 +145,12 @@ const copyToClipboard = () => {
         </ul>
       </nav>
       <div className="container">
+
+    <p><a href="https://github.com/ArielRin/PangeaPage-Update/blob/master/readme.md"
+       target="_blank"
+       rel="noopener noreferrer">
+      **** DRAFT ONLY  webpage update readme here **********
+    </a></p>
         <div className="header">
           <h1 className="title">
             Maximize Rewards: Ama Lounge NFT Token with 9% BNB Rewards, Low Taxes
@@ -158,29 +165,6 @@ const copyToClipboard = () => {
 
 
 
-                            <div className="connect">
-                              <ConnectWallet
-                                dropdownPosition={{
-                                  side: "bottom",
-                                  align: "center",
-                                }}
-                                theme={"dark"}
-                                switchToActiveChain={true}
-                                modalSize={"wide"}
-                                welcomeScreen={{
-                                  img: {
-                                    src: "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/pangearnd.png",
-                                    width: 150,
-                                    height: 150,
-                                  },
-                                  title: "Continue to Pangea ",
-                                }}
-                                modalTitleIconUrl={
-                                  "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/pangeaaLogo.png"
-                                }
-
-                              />
-                            </div>
 
 
         <p className="descriptionsml">
@@ -311,12 +295,41 @@ const copyToClipboard = () => {
          rel="noopener noreferrer">
         BSC Scan
       </a></p>
+
+                                  <div className="connect">
+                                    <ConnectWallet
+                                      dropdownPosition={{
+                                        side: "bottom",
+                                        align: "center",
+                                      }}
+                                      theme={"dark"}
+                                      switchToActiveChain={true}
+                                      modalSize={"wide"}
+                                      welcomeScreen={{
+                                        img: {
+                                          src: "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/pangearnd.png",
+                                          width: 150,
+                                          height: 150,
+                                        },
+                                        title: "Continue to Pangea ",
+                                      }}
+                                      modalTitleIconUrl={
+                                        "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/pangeaaLogo.png"
+                                      }
+
+                                    />
+                                  </div>
       <button onClick={copyToClipboard}>Copy Address</button>
         {copySuccess && <div>{copySuccess}</div>}
 
-              <button onClick={handleAddToken}>
-                Add Token to Wallet
-              </button>
+      <button onClick={handleAddToken}>
+        Add Token to metamask
+      </button>
+
+
+      <button >
+        Add Token to other wallet (test)
+      </button>
         </div>
 
       </div>

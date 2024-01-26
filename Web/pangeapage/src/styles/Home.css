@@ -160,7 +160,7 @@
 
 
 
-  /* NAVBAR CSS*/
+  /* NAVBAR CSS @CMH */
 .navbar {
   /* Additional styles if needed, e.g., background color */
   background-color: #333; /* Example background color */
@@ -189,4 +189,16 @@
 .nav-links li a:hover {
   color: #017bff; /* Color change on hover, if desired */
   /* Other hover effects */
+}
+
+/* Hyperlink Colours @CMH */
+a, a:visited {
+  color: white; /* Sets the link color to cyan for both normal and visited links */
+  text-decoration: none; /* Removes the underline from links */
+  font-weight: bold; /* Makes the text bold */
+}
+
+a:hover {
+  color: cyan; /* Keeps the color cyan on hover */
+  text-decoration: none; /* Ensures no underline appears on hover */
 }
