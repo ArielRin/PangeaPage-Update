@@ -11,22 +11,22 @@ const TOKEN_IMAGE = 'https://raw.githubusercontent.com/ArielRin/PangeaPage-Updat
 const TOKEN_SYMBOL = 'PRT';
 const TOKEN_DECIMALS = 18;
 
-const INITIAL_SUPPLY = 1000000; // Initial supply set at 1,000,000
+const INITIAL_SUPPLY = 1000000; //  set at 1,000,000
 
-import bannerImage from './banner1.png'; //
-import gregImage from './greg.jpg'; //
-import mattImage from './matt.jpg';
-import backgroundImage from './bkg.png';
-import logo3 from './3.png';
-import logo5 from './5.png';
-import logo6 from './6.png';
-import logoBitv from './bitv.png'; //
-import logoSmart from './smart.png'; //
-import logoDh from './dh.png';    //
-import twitterImage from './twitter.png';
-import telegramImage from './telegram.png';
-import binanceImage from './binance.png';
-import githubImage from './github.png';
+import bannerImage from './images/banner1.png'; //
+import gregImage from './images/greg.jpg'; //
+import mattImage from './images/matt.jpg';
+import backgroundImage from './images/bkg.png';
+import logo3 from './images/3.png';
+import logo5 from './images/5.png';
+import logo6 from './images/6.png';
+import logoBitv from './images/bitv.png'; //
+import logoSmart from './images/smart.png'; //
+import logoDh from './images/dh.png';    //
+import twitterImage from './images/twitter.png';
+import telegramImage from './images/telegram.png';
+import binanceImage from './images/binance.png';
+import githubImage from './images/github.png';
 
 
 
@@ -219,6 +219,8 @@ const copyToClipboard = () => {
      rel="noopener noreferrer">
     Check progress here
   </a></p>
+
+
         <div className="header">
           <h1 className="title">
             Maximize Investments with Pangea Rewards.
@@ -231,16 +233,8 @@ const copyToClipboard = () => {
             Buy Tokens
           </a>
           <a href="https://pangealasvegas.com/#/main/mint" target="_blank" rel="noopener noreferrer" className="button2">
-  Mint NFTs
-</a>
-
-
-
-
-
-
-
-
+            Mint NFTs
+          </a>
         </div>
 
 
@@ -406,7 +400,7 @@ const copyToClipboard = () => {
 
 
 
-               <p className="contract">
+               <p className="contract" >
                  The word Pangea comes from the ancient Greek, with pan meaning "all, entire, whole" and Gea meaning "Mother Earth, land". It was the name of the big single continent which existed many centuries ago.
                </p>
                     <p className="contract">

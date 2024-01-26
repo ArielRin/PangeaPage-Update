@@ -57,6 +57,8 @@
 
 .connect {
   margin-bottom: 2rem;
+
+  margin-left: 150px
 }
 
 .description {
@@ -85,6 +87,7 @@
   margin-bottom: 2rem;
   line-height: 1.0;
   font-size: 0.8rem;
+  margin-left: 150px
 }
 
 .code {
@@ -272,6 +275,7 @@ a:hover {
   color: white;
   padding: 20px;
   border-radius: 15px; /* Adjust the radius as needed */
+
 }
 
 .black-section {
@@ -471,6 +475,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin-left: 150px
 }
 
 .social-icon {
