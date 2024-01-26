@@ -186,8 +186,14 @@ const copyToClipboard = () => {
     <p><a href="https://github.com/ArielRin/PangeaPage-Update/blob/master/readme.md#to-do--next-update"
        target="_blank"
        rel="noopener noreferrer">
-      **** DRAFT ONLY  webpage update readme here **********
+      **** DRAFT ONLY **** 
     </a></p>
+
+  <p><a href="https://github.com/ArielRin/PangeaPage-Update/blob/master/readme.md#to-do--next-update"
+     target="_blank"
+     rel="noopener noreferrer">
+    webpage update development readme here
+  </a></p>
         <div className="header">
           <h1 className="title">
             Maximize Rewards: Ama Lounge NFT Token with 9% BNB Rewards, Low Taxes
