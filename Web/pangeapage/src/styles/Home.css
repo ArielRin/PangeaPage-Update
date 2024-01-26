@@ -175,7 +175,7 @@
   /* NAVBAR CSS @CMH */
 .navbar {
   /* Additional styles if needed, e.g., background color */
-  background-color: #333; /* Example background color */
+  background-color: #000; /* Example background color */
 }
 
 .nav-links {
@@ -216,7 +216,7 @@ a, a:visited {
 }
 
 a:hover {
-  color: cyan; /* Keeps the color cyan on hover */
+  color: White; /* Keeps the color cyan on hover */
   text-decoration: none; /* Ensures no underline appears on hover */
 }
 
@@ -268,7 +268,7 @@ a:hover {
 }
 
 .footer-section {
-  background-color: rgba(17, 16, 17, 0.8);
+  background-color: black;
   color: white;
   padding: 20px;
   border-radius: 15px; /* Adjust the radius as needed */
@@ -405,4 +405,63 @@ body {
     width: 100%; /* Adjust the size as needed */
     max-width: 75px; /* Reduced maximum size of logos by 50% */
     height: auto;
+}
+
+.button2{
+    background-color: #ff6b09; /* Blue background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Top and bottom padding of 10px, left and right padding of 20px */
+    text-align: center; /* Center the text inside the button */
+    text-decoration: none; /* No underline on the text */
+    display: inline-block; /* Align buttons inline */
+    font-size: 16px; /* Set font size */
+    margin: 4px 2px; /* Margin around the buttons */
+    cursor: pointer; /* Change mouse cursor to pointer when hovering over the button */
+    border-radius: 15px; /* Rounded corners with a radius of 15px */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.button2:hover {
+    background-color: #821009; /* Darker blue background on hover */
+}
+
+
+button {
+    background-color: #4d7fc5; /* Blue background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Top and bottom padding of 10px, left and right padding of 20px */
+    text-align: center; /* Center the text inside the button */
+    text-decoration: none; /* No underline on the text */
+    display: inline-block; /* Align buttons inline */
+    font-size: 16px; /* Set font size */
+    margin: 4px 2px; /* Margin around the buttons */
+    cursor: pointer; /* Change mouse cursor to pointer when hovering over the button */
+    border-radius: 15px; /* Rounded corners with a radius of 15px */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+button:hover {
+    background-color: #8cd7ff; /* Darker blue background on hover */
+}
+
+
+.button-link {
+  background-color: #4d7fc5; /* Blue background */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding */
+  text-align: center; /* Center text */
+  text-decoration: none; /* No underline */
+  display: inline-block; /* Inline display */
+  font-size: 16px; /* Font size */
+  margin: 4px 2px; /* Margin */
+  cursor: pointer; /* Pointer cursor */
+  border-radius: 15px; /* Rounded corners */
+  transition: background-color 0.3s; /* Color transition */
+}
+
+.button-link:hover {
+  background-color: #8cd7ff; /* Darker blue on hover */
 }

@@ -245,6 +245,13 @@ const copyToClipboard = () => {
             Experience Exclusive Benefits: Get 9% BNB returns with minimal tax impact through Pangea Rewards. Join now!
           </p>
 
+                    <a href="https://pancakeswap.finance/swap?outputCurrency=0xd8B9E0993fce7d05b3F11D828Cf52D17637142Ca" target="_blank" rel="noopener noreferrer" className="button-link">
+            Buy Tokens
+          </a>
+          <a href="https://pangealasvegas.com/#/main/mint" target="_blank" rel="noopener noreferrer" className="button2">
+  Mint NFTs
+</a>
+
 
 
 
@@ -294,10 +301,10 @@ const copyToClipboard = () => {
           <p className="descriptionsmlnsapce">
                      Tokens Removed from Supply: {tokensRemoved}
           </p>
-          <button onClick={addTokenToWallet}>
+          <button className="button2" onClick={addTokenToWallet}>
             Add Token to Wallet
           </button>
-          <button onClick={copyToClipboard}>Copy Address</button>
+          <button className="button" onClick={copyToClipboard}>Copy Address</button>
             {copySuccess && <div>{copySuccess}</div>}
      </section>
 
@@ -326,11 +333,9 @@ const copyToClipboard = () => {
           <p className="descriptionsml">
             The Pangea Las Vegas Lounge NFT series showcases a stunning falcon perched on a globe. Owning these NFTs brings continuous rewards simply for holding them. This collection represents a fusion of art and innovation, providing owners with exclusive benefits such as VIP experiences. Become a part of this community today to acquire a distinctive artwork and enjoy ongoing rewards. Additionally, 1% of sales proceeds are distributed to NFT holders. Each NFT is priced at $50.00, and holders are also required to maintain a $50.00 holding in Pangea tokens.
           </p>
-          <p><a href="https://pangealasvegas.com/#/main/mint"
-             target="_blank"
-             rel="noopener noreferrer">
-            Mint NFTs
-          </a></p>
+          <a href="https://pangealasvegas.com/#/main/mint" target="_blank" rel="noopener noreferrer" className="button-link">
+  Mint NFTs
+</a>
      </section>
 
       {/* Partners Section */}
@@ -388,9 +393,6 @@ const copyToClipboard = () => {
 
      {/* Partners Section */}
      <section id="footer" className="footer-section">
-          <p className="description">
-          Pangea Rewards Token on Binance Smart Chain
-          </p>
           <p className="contract">
             <a href="#!" onClick={() => copyToClipboard(TOKEN_ADDRESS)}>0xd8b9e0993fce7d05b3f11d828cf52d17637142ca</a>
           </p>
@@ -404,13 +406,17 @@ const copyToClipboard = () => {
            <p className="contract">
              The word Pangea comes from the ancient Greek, with pan meaning "all, entire, whole" and Gea meaning "Mother Earth, land". It was the name of the big single continent which existed many centuries ago.
            </p>
+                <p className="contract">
+                Pangea Rewards Token on Binance Smart Chain 2024
+                </p>
+
+           <p className="contract">
+             Webpage Created by InHaus Development
+           </p>
 
      </section>
     </div>
 
-      <p className="contract">
-          Webpage Created by InHaus Development 2024
-      </p>
     </div>
 </div>
 </main>
