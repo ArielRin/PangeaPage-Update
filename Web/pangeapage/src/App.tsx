@@ -1,6 +1,8 @@
 import { ConnectWallet } from "@thirdweb-dev/react";
 import React, { useEffect, useState } from 'react';
 
+import backgroundImage from './bkg.png';
+
 import "./styles/Home.css";
 
 const TOKEN_ADDRESS = '0xd8b9e0993fce7d05b3f11d828cf52d17637142ca'; //og pangea ca
@@ -17,6 +19,18 @@ import bannerImage from './banner1.png'; // Adjust the path as necessary
 
 
 export default function Home() {
+
+  const appStyle = {
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      minHeight: '100vh', // Ensures the background covers the full viewport height
+      // ... other style properties if needed
+    };
+
+
+
+
 
 // add token to metamask
 // ##############################################################
@@ -167,20 +181,17 @@ const copyToClipboard = () => {
 // ##############################################################
 // ##############################################################
   return (
-
     <main className="main">
+  <div style={appStyle}>
       <nav className="navbar">
         <ul className="nav-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#tokenomics">Tokenomics</a></li>
+          <li><a href="#tokenomics">Token</a></li>
           <li><a href="#nft">NFT</a></li>
           <li><a href="#team">Team</a></li>
-          <li><a href="#buynow">Buy Now</a></li>
+          <li><a href="#buynow">Lounge</a></li>
         </ul>
       </nav>
-      <div className="banner-container">
-        <img src={bannerImage} alt="Banner" className="banner-image" />
-      </div>
       <div className="container">
 
     <p><a href="https://github.com/ArielRin/PangeaPage-Update/blob/master/readme.md#to-do--next-update"
@@ -196,13 +207,13 @@ const copyToClipboard = () => {
   </a></p>
         <div className="header">
           <h1 className="title">
-            Maximize Rewards: Ama Lounge NFT Token with 9% BNB Rewards, Low Taxes
+            Maximize Investments with Pangea Rewards.
           </h1>
           <p className="description">
-            Unlock rewards: Ama Lounge NFT token offers 9% BNB rewards with low taxes. Join now!
+            Experience Exclusive Benefits: Get 9% BNB returns with minimal tax impact through Pangea Rewards. Join now!
           </p>
           <p className="contract">
-            PangeaRewardsToken Contract: <a href="#!" onClick={() => copyToClipboard(TOKEN_ADDRESS)}>0xd8b9e0993fce7d05b3f11d828cf52d17637142ca</a>
+            <a href="#!" onClick={() => copyToClipboard(TOKEN_ADDRESS)}>0xd8b9e0993fce7d05b3f11d828cf52d17637142ca</a>
           </p>
               {copySuccess && <div>{copySuccess}</div>}
 
@@ -231,17 +242,21 @@ const copyToClipboard = () => {
              rel="noopener noreferrer">
             Mint NFTs
           </a></p>
-
+      {/* About Section */}
+      <section id="about" className="partner-section">
           <p className="description">
             About
           </p>
           <p className="descriptionsml">
-            Welcome to the Ama Lounge, where we have something special to offer you. Our lounge introduces a unique token that grants exclusive benefits to its holders. To obtain this token, all you need is our one-of-a-kind NFT and a minimum investment of $50.00 worth of PRT. By holding our remarkable NFT and meeting the specified investment threshold, you unlock a world of advantages. One of the most significant benefits is the extra 1% reward in BNB that you receive on every sell transaction. This additional reward boosts your total earnings to an impressive 9% in BNB, creating an opportunity for substantial returns. But it doesn't stop there. We understand the importance of keeping taxes in check while maximizing your rewards. That's why we have designed our system in a way that ensures relatively low tax implications for our token holders. This way, you can enjoy the benefits of our lounge without worrying about excessive tax burdens. Imagine lounging in our exclusive space, knowing that your investment is not only safeguarded but also generating exceptional rewards. With our token, you become a part of an elite community that enjoys the perks of additional BNB rewards, amplifying your overall gains. So, step into the Ama Lounge, secure your one-of-a-kind NFT, invest $50.00 worth of PRT, and experience the satisfaction of earning an extra 1% reward in BNB on every sell transaction. With a total rewards package of 9% in BNB and a focus on maintaining low taxes, we ensure that your journey in our lounge is not only rewarding but also financially savvy.
+          Welcome to Pangea, where exclusive rewards await you. Our Pangea Rewards Token (PRT) holders enjoy a unique 9% return in BNB, including an additional 1% bonus on each sale. This high-yield benefit is coupled with low tax implications, ensuring your gains are maximized without heavy tax burdens. Our exclusive lounge is more than just an investment; it's an elite experience.
+          Accessing these privileges is simple. Just own our exclusive NFT and hold a minimum of $50 in PRT. This small investment opens doors to higher BNB rewards and a smart financial journey in our community. Join us with a $50 PRT investment, secure your NFT, and start enjoying an enhanced 9% return in BNB on your transactions, all with the assurance of minimized taxes.
           </p>
+      </section>
 
-
+      {/* Token Section */}
+      <section id="tokenomics" className="black-section">
           <p className="description">
-            Tokenomics
+            Token
           </p>
             <p><a href="https://pancakeswap.finance/swap?outputCurrency=0xd8b9e0993fce7d05b3f11d828cf52d17637142ca&chainId=56"
                target="_blank"
@@ -264,26 +279,28 @@ const copyToClipboard = () => {
               Dex Screener
             </a></p>
           <p className="descriptionsml">
-            6% on buys 4% in bnb rewards 1% to liquidity 1% to buy back and burn threshold to burn will be 500 tokens. 7% on sells 4% in bnb rewards 1% to nft holders that hold 50.00 in tokens 1% to liquidity 1% to buy back and burn threshold to burn 500 tokens.
+              For purchases, enjoy a 6% allocation with 4% in BNB rewards, 1% contributed to liquidity, and 1% for buybacks and token burning (triggered at a 500-token threshold). On sales, benefit from a 7% distribution, including 4% in BNB rewards, 1% shared with NFT holders maintaining $50.00 in tokens, 1% towards liquidity, and another 1% for buybacks and burning, also activated at 500 tokens.
           </p>
 
 
-        <p className="descriptionsml">
-          Initial Supply: {INITIAL_SUPPLY.toLocaleString()}
-        </p>
-        <p className="descriptionsml">
-                   Remaining Supply: {totalSupply}
-        </p>
-        <p className="descriptionsml">
+          <p className="descriptionsmlnsapce">
+              Initial Supply: {INITIAL_SUPPLY.toLocaleString()}
+          </p>
+          <p className="descriptionsmlnsapce">
+             Remaining Supply: {totalSupply}
+          </p>
+          <p className="descriptionsmlnsapce">
                      Tokens Removed from Supply: {tokensRemoved}
-        </p>
+          </p>
 
-
+     </section>
+     {/* NFT Section */}
+     <section id="nft" className="partner-section">
           <p className="description">
             Pangea NFT Collection
           </p>
           <p className="descriptionsml">
-            NFT collection for Pangea Las Vegas Lounge features a majestic falcon atop the globe. Holders of the NFTs are rewarded just by holding them. It's a community of art and innovation, offering exclusive perks like VIP experiences. Join now to own a unique piece of art and earn rewards over time. 1% of sells will go to NFT holders. NFT’s are 50.00, and one must hold 50.00 of Pangea token as well.
+            The Pangea Las Vegas Lounge NFT series showcases a stunning falcon perched on a globe. Owning these NFTs brings continuous rewards simply for holding them. This collection represents a fusion of art and innovation, providing owners with exclusive benefits such as VIP experiences. Become a part of this community today to acquire a distinctive artwork and enjoy ongoing rewards. Additionally, 1% of sales proceeds are distributed to NFT holders. Each NFT is priced at $50.00, and holders are also required to maintain a $50.00 holding in Pangea tokens.
           </p>
           <p><a href="https://pangealasvegas.com/#/main/mint"
              target="_blank"
@@ -291,6 +308,8 @@ const copyToClipboard = () => {
             Mint NFTs
           </a></p>
 
+     </section>
+     <section id="nft" className="black-section">
 
           <p className="description">
             Our Partners
@@ -299,102 +318,108 @@ const copyToClipboard = () => {
             Achieve Great Things Together!
           </p>
 
-
+    </section>
+      {/* Partners Section */}
+      <section id="team" className="partner-section">
           <p className="description">
             Pangea Team
           </p>
           <p className="descriptionsml">
-            The Pangea Las Vegas Token team consists of experienced professionals with a passion for blockchain and cryptocurrency. With a focus on transparency and community engagement, the team is dedicated to delivering the best possible user experience.
+            The team behind Pangea Las Vegas Token is comprised of seasoned experts who are deeply passionate about blockchain and cryptocurrency. They prioritize transparency and active community involvement, committing themselves to providing an exceptional user experience.
           </p>
           <p className="descriptionsml">
-            Greg
+            Greg and Matt
           </p>
-          <p className="descriptionsml">
-            Matt
-          </p>
-
-
           <p className="description">
-             .
           </p>
+     </section>
+     {/* Partners Section */}
+     <section id="footer" className="footer-section">
+
+
+
           <p className="descriptionsml">
-            Footer The word Pangea comes from the ancient Greek, with pan meaning "all, entire, whole" and Gea meaning "Mother Earth, land". It was the name of the big single continent which existed many centuries ago.
+            The word Pangea comes from the ancient Greek, with pan meaning "all, entire, whole" and Gea meaning "Mother Earth, land". It was the name of the big single continent which existed many centuries ago.
           </p>
-        <p><a href="https://x.com/official92676?t=zCKg5fW5RcTPwp0EaLQbDg&s=09"
-           target="_blank"
-           rel="noopener noreferrer">
-          X (Twitter)
-        </a></p>
-        <p><a href="https://t.me/PangeaLasVegasPRT"
-           target="_blank"
-           rel="noopener noreferrer">
-          Telegram Channel
-        </a></p>
-      <p><a href="https://github.com/ArielRin/PangeaPage-Update"
-         target="_blank"
-         rel="noopener noreferrer">
-        Github
-      </a></p>
-      <p><a href="https://bscscan.com/token/0xd8b9e0993fce7d05b3f11d828cf52d17637142ca#code"
-         target="_blank"
-         rel="noopener noreferrer">
-        BSC Scan
-      </a></p>
 
-                                  <div className="connect">
-                                    <ConnectWallet
-                                      dropdownPosition={{
-                                        side: "bottom",
-                                        align: "center",
-                                      }}
-                                      theme={"dark"}
-                                      switchToActiveChain={true}
-                                      modalSize={"wide"}
-                                      welcomeScreen={{
-                                        img: {
-                                          src: "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/pangearnd.png",
-                                          width: 150,
-                                          height: 150,
-                                        },
-                                        title: "Continue to Pangea ",
-                                      }}
-                                      modalTitleIconUrl={
-                                        "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/pangeaaLogo.png"
-                                      }
 
-                                    />
-                                  </div>
+          <p className="contract">
+            <a href="#!" onClick={() => copyToClipboard(TOKEN_ADDRESS)}>0xd8b9e0993fce7d05b3f11d828cf52d17637142ca</a>
+          </p>
+              {copySuccess && <div>{copySuccess}</div>}
+          <p><a href="https://x.com/official92676?t=zCKg5fW5RcTPwp0EaLQbDg&s=09"
+              target="_blank"
+              rel="noopener noreferrer">
+              X (Twitter)
+          </a></p>
+          <p><a href="https://t.me/PangeaLasVegasPRT"
+              target="_blank"
+              rel="noopener noreferrer">
+              Telegram Channel
+          </a></p>
+          <p><a href="https://github.com/ArielRin/PangeaPage-Update"
+              target="_blank"
+              rel="noopener noreferrer">
+              Github
+          </a></p>
+          <p><a href="https://bscscan.com/token/0xd8b9e0993fce7d05b3f11d828cf52d17637142ca#code"
+              target="_blank"
+              rel="noopener noreferrer">
+              BSC Scan
+          </a></p>
+
+
+      <div className="connect">
+        <ConnectWallet
+          dropdownPosition={{
+            side: "bottom",
+            align: "center",
+          }}
+          theme={"dark"}
+          switchToActiveChain={true}
+          modalSize={"wide"}
+          welcomeScreen={{
+            img: {
+              src: "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/pangearnd.png",
+              width: 150,
+              height: 150,
+            },
+            title: "Continue to Pangea ",
+          }}
+          modalTitleIconUrl={
+            "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/pangeaaLogo.png"
+          }
+
+        />
+      </div>
+
+
 
       <button onClick={addTokenToWallet}>
-        Add Token to Wallets
+        Add Token to Wallet
       </button>
       <button onClick={copyToClipboard}>Copy Address</button>
         {copySuccess && <div>{copySuccess}</div>}
 
+              </section>
         </div>
-
         <p className="contract">
           Webpage Created by InHaus Development 2024
        </p>
 
+
       </div>
+
+
+
+            </div>
     </main>
   );
 }
 
 
 
-
-                  //
-                  // <div className="connect">
-                  //   <ConnectWallet
-                  //     dropdownPosition={{
-                  //       side: "bottom",
-                  //       align: "center",
-                  //     }}
-                  //   />
-                  // </div>
-                  //
-                  // <button onClick={handleAddToken}>
-                  //   Add Token to metamask
-                  // </button>
+// 
+// <div className="banner-container">
+//   <img src={bannerImage} alt="Banner" className="banner-image" />
+// </div>

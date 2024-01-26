@@ -68,6 +68,13 @@
   font-size: 1.0rem;
 }
 
+.descriptionsmlnsapce {
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.2;
+  font-size: 1.0rem;
+}
+
 .contract {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -214,5 +221,64 @@ a:hover {
 .banner-image {
   width: 100%;
   height: auto;
-  object-fit: cover; 
+  object-fit: cover;
+}
+
+
+
+/* ... other styles ... */
+.nft-section, .partner-section, .footer-section, .black-section {
+  background-color: rgba(17, 16, 17, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 14.23px; /* Adds space below each section */
+}
+
+/* If the last section should not have a margin at the bottom,
+   you can override it for the last section specifically.
+   Assuming .footer-section is the last one: */
+
+.footer-section {
+  margin-bottom: 0;
+}
+
+.nft-section {
+  background-color: rgba(17, 16, 17, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 15px; /* Adjust the radius as needed */
+}
+
+.partner-section {
+  background-color: rgba(17, 16, 17, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 15px; /* Adjust the radius as needed */
+}
+
+.footer-section {
+  background-color: rgba(17, 16, 17, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 15px; /* Adjust the radius as needed */
+}
+
+.black-section {
+  background-color: rgba(17, 16, 17, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 15px; /* Adjust the radius as needed */
+}
+/* ... other styles ... */
+
+
+
+/* BKG @dev */
+
+body {
+  background-image: url(backgroundImage);
+  background-size: cover; /* Cover the entire page */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-attachment: fixed; /* Optional: Makes the background fixed during scroll */
 }
