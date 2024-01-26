@@ -83,7 +83,7 @@
 .contract {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  line-height: 1.2;
+  line-height: 1.0;
   font-size: 0.8rem;
 }
 
@@ -207,7 +207,7 @@
 a, a:visited {
   color: white; /* Sets the link color to cyan for both normal and visited links */
   text-decoration: none; /* Removes the underline from links */
-  font-weight: bold; /* Makes the text bold */
+
   text-shadow:
     -1px -1px 0 #000,
      1px -1px 0 #000,
@@ -347,4 +347,62 @@ body {
 
 .link-container p {
   margin: 0; /* Removes default paragraph margins */
+}
+.social-links {
+    display: flex;
+}
+
+.social-links p {
+    margin: 0; /* Removes default paragraph margins for cleaner spacing */
+    padding-right: 15px; /* Adds right padding to each link */
+    font-size: 0.9rem;
+}
+
+/* team images container*/
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap as needed */
+}
+
+.team-member {
+    flex: 1 1 300px; /* Adjust the flex-basis to change the breakpoint */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-member-image {
+    width: 150px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 50%; /* Optional: for circular images */
+}
+
+.team-member-name {
+    margin-top: 10px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Partners  */
+.partner-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2px; /* Adjust the gap as needed */
+}
+
+.partner-logo {
+    flex: 1 1 200px; /* Adjust the flex-basis to change the breakpoint */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.partner-logo-image {
+    width: 100%; /* Adjust the size as needed */
+    max-width: 75px; /* Reduced maximum size of logos by 50% */
+    height: auto;
 }

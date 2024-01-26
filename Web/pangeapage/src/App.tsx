@@ -1,7 +1,7 @@
 import { ConnectWallet } from "@thirdweb-dev/react";
 import React, { useEffect, useState } from 'react';
+import CountUp from 'react-countup';
 
-import backgroundImage from './bkg.png';
 
 import "./styles/Home.css";
 
@@ -13,7 +13,16 @@ const TOKEN_DECIMALS = 18;
 
 const INITIAL_SUPPLY = 1000000; // Initial supply set at 1,000,000
 
-import bannerImage from './banner1.png'; // Adjust the path as necessary
+import bannerImage from './banner1.png'; //
+import gregImage from './greg.jpg'; //
+import mattImage from './matt.jpg';
+import backgroundImage from './bkg.png';
+import logo3 from './3.png';
+import logo5 from './5.png';
+import logo6 from './6.png';
+import logoBitv from './bitv.png'; //
+import logoSmart from './smart.png'; //
+import logoDh from './dh.png';    //
 
 
 
@@ -24,8 +33,8 @@ export default function Home() {
       backgroundImage: `url(${backgroundImage})`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
-      minHeight: '100vh', // Ensures the background covers the full viewport height
-      // ... other style properties if needed
+      minHeight: '100vh',
+
     };
 
 
@@ -291,15 +300,15 @@ const copyToClipboard = () => {
           <button onClick={copyToClipboard}>Copy Address</button>
             {copySuccess && <div>{copySuccess}</div>}
      </section>
-     <section id="tokenlinks" className="black-section">
 
-     <div className="link-container">
-<p><a href="https://pancakeswap.finance/swap?outputCurrency=0xd8b9e0993fce7d05b3f11d828cf52d17637142ca&chainId=56" target="_blank" rel="noopener noreferrer">Buy Token</a></p>
-<p><a href="https://bscscan.com/token/0xd8b9e0993fce7d05b3f11d828cf52d17637142ca#code" target="_blank" rel="noopener noreferrer">BSC Scan</a></p>
-<p><a href="https://pancakeswap.finance/v2/add/BNB/0xd8b9e0993fce7d05b3f11d828cf52d17637142ca" target="_blank" rel="noopener noreferrer">Add to LP</a></p>
-<p><a href="https://dexscreener.com/bsc/0xad80fdc107d983cd76bec153abc00ff00e3477de" target="_blank" rel="noopener noreferrer">Chart</a></p>
-</div>
-</section>
+     <section id="tokenlinks" className="black-section">
+        <div className="link-container">
+          <p><a href="https://pancakeswap.finance/swap?outputCurrency=0xd8b9e0993fce7d05b3f11d828cf52d17637142ca&chainId=56" target="_blank" rel="noopener noreferrer">Buy Token</a></p>
+          <p><a href="https://bscscan.com/token/0xd8b9e0993fce7d05b3f11d828cf52d17637142ca#code" target="_blank" rel="noopener noreferrer">BSC Scan</a></p>
+          <p><a href="https://pancakeswap.finance/v2/add/BNB/0xd8b9e0993fce7d05b3f11d828cf52d17637142ca" target="_blank" rel="noopener noreferrer">Add to LP</a></p>
+          <p><a href="https://dexscreener.com/bsc/0xad80fdc107d983cd76bec153abc00ff00e3477de" target="_blank" rel="noopener noreferrer">Chart</a></p>
+        </div>
+     </section>
 
      <div id="dexscreener-embed">
         <iframe
@@ -308,8 +317,6 @@ const copyToClipboard = () => {
           allowFullScreen>
         </iframe>
       </div>
-
-
 
      {/* NFT Section */}
      <section id="nft" className="partner-section">
@@ -324,87 +331,89 @@ const copyToClipboard = () => {
              rel="noopener noreferrer">
             Mint NFTs
           </a></p>
-
      </section>
-     <section id="nft" className="black-section">
 
-          <p className="outlined-text2">
-            Our Partners
-          </p>
-          <p className="descriptionsml">
-            Achieve Great Things Together!
-          </p>
-
-    </section>
       {/* Partners Section */}
-      <section id="team" className="partner-section">
-          <p className="description">
-            Pangea Team
-          </p>
-          <p className="descriptionsml">
-            The team behind Pangea Las Vegas Token is comprised of seasoned experts who are deeply passionate about blockchain and cryptocurrency. They prioritize transparency and active community involvement, committing themselves to providing an exceptional user experience.
-          </p>
-          <p className="descriptionsml">
-            Greg and Matt
-          </p>
-          <p className="description">
-          </p>
+     <section id="partners" className="black-section">
+         <p className="outlined-text2">
+             Our Partners
+         </p>
+         <p className="descriptionsml">
+           Achieve Great Things Together!
+         </p>
+         <div className="partner-container">
+             <div className="partner-logo">
+                 <img src={logo3} alt="Partner Logo 3" className="partner-logo-image" />
+             </div>
+             <div className="partner-logo">
+                 <img src={logo5} alt="Partner Logo 5" className="partner-logo-image" />
+             </div>
+             <div className="partner-logo">
+                 <img src={logo6} alt="Partner Logo 6" className="partner-logo-image" />
+             </div>
+             <div className="partner-logo">
+                 <img src={logoBitv} alt="Partner Logo Bitv" className="partner-logo-image" />
+             </div>
+             <div className="partner-logo">
+                 <img src={logoSmart} alt="Partner Logo Smart" className="partner-logo-image" />
+             </div>
+             <div className="partner-logo">
+                 <img src={logoDh} alt="Partner Logo Dh" className="partner-logo-image" />
+             </div>
+         </div>
      </section>
+
+      {/* Team Section */}
+
+     <section id="team" className="partner-section">
+    <p className="description">
+        Pangea Team
+    </p>
+    <p className="descriptionsml">
+      The team behind Pangea Las Vegas Token is comprised of seasoned experts who are deeply passionate about blockchain and cryptocurrency. They prioritize transparency and active community involvement, committing themselves to providing an exceptional user experience.
+    </p>
+    <div className="team-container">
+        <div className="team-member">
+            <img src={gregImage} alt="Greg" className="team-member-image" />
+            <p className="team-member-name">Greg</p>
+        </div>
+        <div className="team-member">
+            <img src={mattImage} alt="Matt" className="team-member-image" />
+            <p className="team-member-name">Matt</p>
+        </div>
+    </div>
+    <p className="description">
+    </p>
+</section>
+
      {/* Partners Section */}
      <section id="footer" className="footer-section">
-
-
-
-          <p className="descriptionsml">
-            The word Pangea comes from the ancient Greek, with pan meaning "all, entire, whole" and Gea meaning "Mother Earth, land". It was the name of the big single continent which existed many centuries ago.
+          <p className="description">
+          Pangea Rewards Token on Binance Smart Chain
           </p>
-
-
           <p className="contract">
             <a href="#!" onClick={() => copyToClipboard(TOKEN_ADDRESS)}>0xd8b9e0993fce7d05b3f11d828cf52d17637142ca</a>
           </p>
               {copySuccess && <div>{copySuccess}</div>}
-          <p><a href="https://x.com/official92676?t=zCKg5fW5RcTPwp0EaLQbDg&s=09"
-              target="_blank"
-              rel="noopener noreferrer">
-              X (Twitter)
-          </a></p>
-          <p><a href="https://t.me/PangeaLasVegasPRT"
-              target="_blank"
-              rel="noopener noreferrer">
-              Telegram Channel
-          </a></p>
-          <p><a href="https://github.com/ArielRin/PangeaPage-Update"
-              target="_blank"
-              rel="noopener noreferrer">
-              Github
-          </a></p>
-          <p><a href="https://bscscan.com/token/0xd8b9e0993fce7d05b3f11d828cf52d17637142ca#code"
-              target="_blank"
-              rel="noopener noreferrer">
-              BSC Scan
-          </a></p>
-
-
-
-
-
-
-
-
-              </section>
-        </div>
-        <p className="contract">
-          Webpage Created by InHaus Development 2024
-       </p>
-
-
+              <div className="social-links">
+          <p><a href="https://x.com/official92676?t=zCKg5fW5RcTPwp0EaLQbDg&s=09" target="_blank" rel="noopener noreferrer">X (Twitter)   </a></p>
+          <p><a href="https://t.me/PangeaLasVegasPRT" target="_blank" rel="noopener noreferrer">Telegram Channel   </a></p>
+          <p><a href="https://github.com/ArielRin/PangeaPage-Update" target="_blank" rel="noopener noreferrer">Github   </a></p>
+          <p><a href="https://bscscan.com/token/0xd8b9e0993fce7d05b3f11d828cf52d17637142ca#code" target="_blank" rel="noopener noreferrer">BSC Scan   </a></p>
       </div>
+           <p className="contract">
+             The word Pangea comes from the ancient Greek, with pan meaning "all, entire, whole" and Gea meaning "Mother Earth, land". It was the name of the big single continent which existed many centuries ago.
+           </p>
 
+     </section>
+    </div>
 
-
-            </div>
-    </main>
+      <p className="contract">
+          Webpage Created by InHaus Development 2024
+      </p>
+    </div>
+</div>
+</main>
   );
 }
 
