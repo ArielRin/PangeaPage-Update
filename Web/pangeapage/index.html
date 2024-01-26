@@ -5,7 +5,53 @@
     <link rel="icon" type="image/svg+xml" href="/src/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pangea Rewards Token</title>
+
+     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/twitter.jpeg" />
+    <meta name="twitter:description" content="Welcome to the Pangea Las Vegas Lounge. Our platform introduces a unique token that grants exclusive benefits to its holders. Enjoy the rewards of our Ama Lounge NFT Token with 9% BNB Rewards and low taxes." />
+    <meta name="description" content="Welcome to the Pangea Las Vegas Lounge. Our platform introduces a unique token that grants exclusive benefits to its holders. Enjoy the rewards of our Ama Lounge NFT Token with 9% BNB Rewards and low taxes." />
   </head>
+  <body>
+    <!-- Loading Screen Div with Black Background -->
+    <div id="loading" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: black; opacity: 1; transition: opacity 1s; z-index: 9999;">
+  <div style="width: 30%; height: 53%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+    <img src="./src/wobblelogo.gif" style="width: 100%; height: auto;">
+  </div>
+</div>
+
+    <!-- Main Content -->
+    <div id="root"></div>
+
+    <!-- JavaScript  Loading Screen -->
+    <script>
+      setTimeout(function() {
+        var loadingDiv = document.getElementById('loading');
+        loadingDiv.style.opacity = '0';
+        setTimeout(function() { loadingDiv.style.display = 'none'; }, 1000);
+      }, 3000);
+    </script>
+
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
