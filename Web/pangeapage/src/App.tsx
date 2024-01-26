@@ -11,6 +11,11 @@ const TOKEN_DECIMALS = 18;
 
 const INITIAL_SUPPLY = 1000000; // Initial supply set at 1,000,000
 
+import bannerImage from './banner1.png'; // Adjust the path as necessary
+
+
+
+
 export default function Home() {
 
 // add token to metamask
@@ -26,7 +31,7 @@ const handleAddToken = () => {
           address: TOKEN_ADDRESS,
           symbol: TOKEN_SYMBOL,
           decimals: TOKEN_DECIMALS,
-          image: 'https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Web/pangeapage/src/pangearnd.png', // Replace with your public image URL
+          image: 'https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Web/pangeapage/src/pangearnd.png',
         },
       },
     })
@@ -44,6 +49,35 @@ const handleAddToken = () => {
 };
 
  // ##############################################################
+ const addTokenToWallet = async () => {
+    if (window.ethereum) {
+      try {
+        const wasAdded = await window.ethereum.request({
+          method: 'wallet_watchAsset',
+          params: {
+            type: 'ERC20',
+            options: {
+              address: TOKEN_ADDRESS,
+              symbol: TOKEN_SYMBOL,
+              decimals: TOKEN_DECIMALS,
+              image: 'https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Web/pangeapage/src/pangearnd.png',
+            },
+          },
+        });
+
+        if (wasAdded) {
+          console.log('Token was added to wallet!');
+        } else {
+          console.log('Token was not added to wallet.');
+        }
+      } catch (error) {
+        console.error('Error adding token to wallet', error);
+      }
+    } else {
+      console.log('Ethereum object does not exist!');
+    }
+  };
+
  // ##############################################################
 
 
@@ -144,6 +178,9 @@ const copyToClipboard = () => {
           <li><a href="#buynow">Buy Now</a></li>
         </ul>
       </nav>
+      <div className="banner-container">
+        <img src={bannerImage} alt="Banner" className="banner-image" />
+      </div>
       <div className="container">
 
     <p><a href="https://github.com/ArielRin/PangeaPage-Update/blob/master/readme.md"
@@ -159,8 +196,10 @@ const copyToClipboard = () => {
             Unlock rewards: Ama Lounge NFT token offers 9% BNB rewards with low taxes. Join now!
           </p>
           <p className="contract">
-            PangeaRewardsToken Contract: 0xd8b9e0993fce7d05b3f11d828cf52d17637142ca
+            PangeaRewardsToken Contract: <a href="#!" onClick={() => copyToClipboard(TOKEN_ADDRESS)}>0xd8b9e0993fce7d05b3f11d828cf52d17637142ca</a>
           </p>
+              {copySuccess && <div>{copySuccess}</div>}
+
 
 
 
@@ -319,23 +358,25 @@ const copyToClipboard = () => {
 
                                     />
                                   </div>
+
+      <button onClick={addTokenToWallet}>
+        Add Token to Wallets
+      </button>
       <button onClick={copyToClipboard}>Copy Address</button>
         {copySuccess && <div>{copySuccess}</div>}
 
-      <button onClick={handleAddToken}>
-        Add Token to metamask
-      </button>
-
-
-      <button >
-        Add Token to other wallet (test)
-      </button>
         </div>
+
+        <p className="contract">
+          Webpage Created by InHaus Development 2024
+       </p>
 
       </div>
     </main>
   );
 }
+
+
 
 
                   //
@@ -347,3 +388,7 @@ const copyToClipboard = () => {
                   //     }}
                   //   />
                   // </div>
+                  //
+                  // <button onClick={handleAddToken}>
+                  //   Add Token to metamask
+                  // </button>
