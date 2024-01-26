@@ -43,6 +43,11 @@
 .title {
   line-height: 1.15;
   font-size: 4rem;
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
 }
 
 .title,
@@ -203,6 +208,11 @@ a, a:visited {
   color: white; /* Sets the link color to cyan for both normal and visited links */
   text-decoration: none; /* Removes the underline from links */
   font-weight: bold; /* Makes the text bold */
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
 }
 
 a:hover {
@@ -281,4 +291,60 @@ body {
   background-size: cover; /* Cover the entire page */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-attachment: fixed; /* Optional: Makes the background fixed during scroll */
+}
+
+/* Black text shadow for outline effect */
+.outlined-text {
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+
+}
+
+
+  .outlined-text2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    text-shadow:
+      -1px -1px 0 #000,
+       1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+
+
+/* Chart embeds .css */
+
+#dexscreener-embed {
+  position: relative;
+  width: 100%;
+  height: 450px; /* Set the height of the container to 450px */
+  border-radius: 15px; /* Rounded corners */
+  overflow: hidden; /* Ensures the iframe corners are also rounded */
+}
+
+#dexscreener-embed iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%; /* Make the iframe fill the container */
+  top: 0;
+  left: 0;
+  border: 0;
+}
+
+
+/* token links */
+.link-container {
+  display: flex;
+  justify-content: space-evenly; /* Evenly spaces the links */
+  align-items: center; /* Vertically centers the links in the container */
+  text-align: center; /* Centers the text inside each link */
+}
+
+.link-container p {
+  margin: 0; /* Removes default paragraph margins */
 }

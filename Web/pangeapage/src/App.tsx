@@ -205,46 +205,52 @@ const copyToClipboard = () => {
      rel="noopener noreferrer">
     Check webpage update progress
   </a></p>
+  <div className="connect">
+    <ConnectWallet
+      dropdownPosition={{
+        side: "bottom",
+        align: "center",
+      }}
+      theme={"dark"}
+      switchToActiveChain={true}
+      modalSize={"wide"}
+      welcomeScreen={{
+        img: {
+          src: "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/pangearnd.png",
+          width: 150,
+          height: 150,
+        },
+        title: "Continue to Pangea ",
+      }}
+      modalTitleIconUrl={
+        "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/pangeaaLogo.png"
+      }
+
+    />
+  </div>
         <div className="header">
           <h1 className="title">
             Maximize Investments with Pangea Rewards.
           </h1>
-          <p className="description">
+          <p className="outlined-text2 ">
             Experience Exclusive Benefits: Get 9% BNB returns with minimal tax impact through Pangea Rewards. Join now!
           </p>
-          <p className="contract">
-            <a href="#!" onClick={() => copyToClipboard(TOKEN_ADDRESS)}>0xd8b9e0993fce7d05b3f11d828cf52d17637142ca</a>
-          </p>
-              {copySuccess && <div>{copySuccess}</div>}
 
 
 
 
 
 
-
-        <p className="descriptionsml">
-           Current Price of $PRT: {tokenPriceUSD}
-        </p>
 
 
         </div>
 
 
         <div className="links">
-          <p><a href="https://pancakeswap.finance/swap?outputCurrency=0xd8b9e0993fce7d05b3f11d828cf52d17637142ca&chainId=56"
-             target="_blank"
-             rel="noopener noreferrer">
-            Buy Token
-          </a></p>
-          <p><a href="https://pangealasvegas.com/#/main/mint"
-             target="_blank"
-             rel="noopener noreferrer">
-            Mint NFTs
-          </a></p>
+
       {/* About Section */}
       <section id="about" className="partner-section">
-          <p className="description">
+          <p className="outlined-text2">
             About
           </p>
           <p className="descriptionsml">
@@ -255,29 +261,16 @@ const copyToClipboard = () => {
 
       {/* Token Section */}
       <section id="tokenomics" className="black-section">
-          <p className="description">
-            Token
+          <p className="outlined-text2">
+            Pangea Rewards Token
           </p>
-            <p><a href="https://pancakeswap.finance/swap?outputCurrency=0xd8b9e0993fce7d05b3f11d828cf52d17637142ca&chainId=56"
-               target="_blank"
-               rel="noopener noreferrer">
-              Buy Token
-            </a></p>
-            <p><a href="https://bscscan.com/token/0xd8b9e0993fce7d05b3f11d828cf52d17637142ca#code"
-               target="_blank"
-               rel="noopener noreferrer">
-              BSC Scan
-            </a></p>
-          <p><a href="https://pancakeswap.finance/v2/add/BNB/0xd8b9e0993fce7d05b3f11d828cf52d17637142ca"
-             target="_blank"
-             rel="noopener noreferrer">
-            Add Liquidity
-          </a></p>
-            <p><a href="https://dexscreener.com/bsc/0xad80fdc107d983cd76bec153abc00ff00e3477de"
-               target="_blank"
-               rel="noopener noreferrer">
-              Dex Screener
-            </a></p>
+          <p className="contract">
+            <a href="#!" onClick={() => copyToClipboard(TOKEN_ADDRESS)}>0xd8b9e0993fce7d05b3f11d828cf52d17637142ca</a>
+          </p>
+              {copySuccess && <div>{copySuccess}</div>}
+          <p className="descriptiontoken">
+               Current Value $PRT: {tokenPriceUSD}
+          </p>
           <p className="descriptionsml">
               For purchases, enjoy a 6% allocation with 4% in BNB rewards, 1% contributed to liquidity, and 1% for buybacks and token burning (triggered at a 500-token threshold). On sales, benefit from a 7% distribution, including 4% in BNB rewards, 1% shared with NFT holders maintaining $50.00 in tokens, 1% towards liquidity, and another 1% for buybacks and burning, also activated at 500 tokens.
           </p>
@@ -292,11 +285,35 @@ const copyToClipboard = () => {
           <p className="descriptionsmlnsapce">
                      Tokens Removed from Supply: {tokensRemoved}
           </p>
-
+          <button onClick={addTokenToWallet}>
+            Add Token to Wallet
+          </button>
+          <button onClick={copyToClipboard}>Copy Address</button>
+            {copySuccess && <div>{copySuccess}</div>}
      </section>
+     <section id="tokenlinks" className="black-section">
+
+     <div className="link-container">
+<p><a href="https://pancakeswap.finance/swap?outputCurrency=0xd8b9e0993fce7d05b3f11d828cf52d17637142ca&chainId=56" target="_blank" rel="noopener noreferrer">Buy Token</a></p>
+<p><a href="https://bscscan.com/token/0xd8b9e0993fce7d05b3f11d828cf52d17637142ca#code" target="_blank" rel="noopener noreferrer">BSC Scan</a></p>
+<p><a href="https://pancakeswap.finance/v2/add/BNB/0xd8b9e0993fce7d05b3f11d828cf52d17637142ca" target="_blank" rel="noopener noreferrer">Add to LP</a></p>
+<p><a href="https://dexscreener.com/bsc/0xad80fdc107d983cd76bec153abc00ff00e3477de" target="_blank" rel="noopener noreferrer">Chart</a></p>
+</div>
+</section>
+
+     <div id="dexscreener-embed">
+        <iframe
+          src="https://dexscreener.com/bsc/0xaD80FDC107d983Cd76BEc153abC00ff00E3477DE?embed=1&theme=dark&trades=0&info=0"
+          title="DexScreener"
+          allowFullScreen>
+        </iframe>
+      </div>
+
+
+
      {/* NFT Section */}
      <section id="nft" className="partner-section">
-          <p className="description">
+          <p className="outlined-text2 ">
             Pangea NFT Collection
           </p>
           <p className="descriptionsml">
@@ -311,7 +328,7 @@ const copyToClipboard = () => {
      </section>
      <section id="nft" className="black-section">
 
-          <p className="description">
+          <p className="outlined-text2">
             Our Partners
           </p>
           <p className="descriptionsml">
@@ -369,37 +386,11 @@ const copyToClipboard = () => {
           </a></p>
 
 
-      <div className="connect">
-        <ConnectWallet
-          dropdownPosition={{
-            side: "bottom",
-            align: "center",
-          }}
-          theme={"dark"}
-          switchToActiveChain={true}
-          modalSize={"wide"}
-          welcomeScreen={{
-            img: {
-              src: "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/pangearnd.png",
-              width: 150,
-              height: 150,
-            },
-            title: "Continue to Pangea ",
-          }}
-          modalTitleIconUrl={
-            "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/pangeaaLogo.png"
-          }
-
-        />
-      </div>
 
 
 
-      <button onClick={addTokenToWallet}>
-        Add Token to Wallet
-      </button>
-      <button onClick={copyToClipboard}>Copy Address</button>
-        {copySuccess && <div>{copySuccess}</div>}
+
+
 
               </section>
         </div>
@@ -419,7 +410,7 @@ const copyToClipboard = () => {
 
 
 
-// 
+//
 // <div className="banner-container">
 //   <img src={bannerImage} alt="Banner" className="banner-image" />
 // </div>
