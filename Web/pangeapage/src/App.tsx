@@ -403,8 +403,8 @@ const copyToClipboard = () => {
                <p className="contract" >
                  The word Pangea comes from the ancient Greek, with pan meaning "all, entire, whole" and Gea meaning "Mother Earth, land". It was the name of the big single continent which existed many centuries ago.
                </p>
-                    <p className="contract">
-                    Pangea Rewards Token on Binance Smart Chain 2024
+                    <p className="descriptionsmlfoot">
+                    Pangea Rewards Token on Binance Smart Chain
                     </p>
 
                     <div className="connect">
@@ -432,7 +432,7 @@ const copyToClipboard = () => {
                     </div>
 
                               <p className="contract">
-                                Webpage Created by InHaus Development
+                                Webpage Created by InHaus Development 2024
                               </p>
 
          </section>
