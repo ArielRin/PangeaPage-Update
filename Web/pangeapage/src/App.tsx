@@ -23,6 +23,11 @@ import logo6 from './6.png';
 import logoBitv from './bitv.png'; //
 import logoSmart from './smart.png'; //
 import logoDh from './dh.png';    //
+import twitterImage from './twitter.png';
+import telegramImage from './telegram.png';
+import binanceImage from './binance.png';
+import githubImage from './github.png';
+
 
 
 
@@ -206,37 +211,14 @@ const copyToClipboard = () => {
     <p><a href="https://github.com/ArielRin/PangeaPage-Update/blob/master/readme.md#to-do--next-update"
        target="_blank"
        rel="noopener noreferrer">
-      **** Text Based DRAFT ONLY ****
+      **** DRAFT ONLY ****
     </a></p>
 
   <p><a href="https://github.com/ArielRin/PangeaPage-Update/commits/master/"
      target="_blank"
      rel="noopener noreferrer">
-    Check webpage update progress
+    Check progress here
   </a></p>
-  <div className="connect">
-    <ConnectWallet
-      dropdownPosition={{
-        side: "bottom",
-        align: "center",
-      }}
-      theme={"dark"}
-      switchToActiveChain={true}
-      modalSize={"wide"}
-      welcomeScreen={{
-        img: {
-          src: "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/pangearnd.png",
-          width: 150,
-          height: 150,
-        },
-        title: "Continue to Pangea ",
-      }}
-      modalTitleIconUrl={
-        "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/pangeaaLogo.png"
-      }
-
-    />
-  </div>
         <div className="header">
           <h1 className="title">
             Maximize Investments with Pangea Rewards.
@@ -267,7 +249,7 @@ const copyToClipboard = () => {
       {/* About Section */}
       <section id="about" className="partner-section">
           <p className="outlined-text2">
-            About
+
           </p>
           <p className="descriptionsml">
           Welcome to Pangea, where exclusive rewards await you. Our Pangea Rewards Token (PRT) holders enjoy a unique 9% return in BNB, including an additional 1% bonus on each sale. This high-yield benefit is coupled with low tax implications, ensuring your gains are maximized without heavy tax burdens. Our exclusive lounge is more than just an investment; it's an elite experience.
@@ -280,12 +262,15 @@ const copyToClipboard = () => {
           <p className="outlined-text2">
             Pangea Rewards Token
           </p>
-          <p className="contract">
-            <a href="#!" onClick={() => copyToClipboard(TOKEN_ADDRESS)}>0xd8b9e0993fce7d05b3f11d828cf52d17637142ca</a>
+          <p className="descriptiontoken">
+            Contract: <a href="#!" onClick={() => copyToClipboard(TOKEN_ADDRESS)}>0xd8b9e0993fce7d05b3f11d828cf52d17637142ca</a>
           </p>
               {copySuccess && <div>{copySuccess}</div>}
           <p className="descriptiontoken">
-               Current Value $PRT: {tokenPriceUSD}
+               Symbol: $PRT
+          </p>
+          <p className="descriptiontoken">
+               Current Value: ${tokenPriceUSD}
           </p>
           <p className="descriptionsml">
               For purchases, enjoy a 6% allocation with 4% in BNB rewards, 1% contributed to liquidity, and 1% for buybacks and token burning (triggered at a 500-token threshold). On sales, benefit from a 7% distribution, including 4% in BNB rewards, 1% shared with NFT holders maintaining $50.00 in tokens, 1% towards liquidity, and another 1% for buybacks and burning, also activated at 500 tokens.
@@ -391,33 +376,72 @@ const copyToClipboard = () => {
     </p>
 </section>
 
-     {/* Partners Section */}
-     <section id="footer" className="footer-section">
-          <p className="contract">
-            <a href="#!" onClick={() => copyToClipboard(TOKEN_ADDRESS)}>0xd8b9e0993fce7d05b3f11d828cf52d17637142ca</a>
-          </p>
-              {copySuccess && <div>{copySuccess}</div>}
-              <div className="social-links">
-          <p><a href="https://x.com/official92676?t=zCKg5fW5RcTPwp0EaLQbDg&s=09" target="_blank" rel="noopener noreferrer">X (Twitter)   </a></p>
-          <p><a href="https://t.me/PangeaLasVegasPRT" target="_blank" rel="noopener noreferrer">Telegram Channel   </a></p>
-          <p><a href="https://github.com/ArielRin/PangeaPage-Update" target="_blank" rel="noopener noreferrer">Github   </a></p>
-          <p><a href="https://bscscan.com/token/0xd8b9e0993fce7d05b3f11d828cf52d17637142ca#code" target="_blank" rel="noopener noreferrer">BSC Scan   </a></p>
-      </div>
-           <p className="contract">
-             The word Pangea comes from the ancient Greek, with pan meaning "all, entire, whole" and Gea meaning "Mother Earth, land". It was the name of the big single continent which existed many centuries ago.
-           </p>
-                <p className="contract">
-                Pangea Rewards Token on Binance Smart Chain 2024
-                </p>
-
-           <p className="contract">
-             Webpage Created by InHaus Development
-           </p>
-
-     </section>
     </div>
 
     </div>
+
+         {/* Partners Section */}
+         <section id="footer" className="footer-section">
+              <p className="contract">
+                <a href="#!" onClick={() => copyToClipboard(TOKEN_ADDRESS)}>0xd8b9e0993fce7d05b3f11d828cf52d17637142ca</a>
+              </p>
+                  {copySuccess && <div>{copySuccess}</div>}
+
+
+                  <div className="social-links">
+                  <a href="https://x.com/official92676?t=zCKg5fW5RcTPwp0EaLQbDg&s=09" target="_blank" rel="noopener noreferrer">
+                  <img src={twitterImage} alt="Twitter" className="social-icon" />
+                  </a>
+                  <a href="https://t.me/PangeaLasVegasPRT" target="_blank" rel="noopener noreferrer">
+                  <img src={telegramImage} alt="Telegram" className="social-icon" />
+                  </a>
+                  <a href="https://bscscan.com/token/0xd8b9e0993fce7d05b3f11d828cf52d17637142ca#code" target="_blank" rel="noopener noreferrer">
+                  <img src={binanceImage} alt="Binance" className="social-icon" />
+                  </a>
+                  <a href="https://github.com/ArielRin/PangeaPage-Update" target="_blank" rel="noopener noreferrer">
+                  <img src={githubImage} alt="GitHub" className="social-icon" />
+                  </a>
+                  </div>
+
+
+
+
+               <p className="contract">
+                 The word Pangea comes from the ancient Greek, with pan meaning "all, entire, whole" and Gea meaning "Mother Earth, land". It was the name of the big single continent which existed many centuries ago.
+               </p>
+                    <p className="contract">
+                    Pangea Rewards Token on Binance Smart Chain 2024
+                    </p>
+
+                    <div className="connect">
+                      <ConnectWallet
+                        dropdownPosition={{
+                          side: "bottom",
+                          align: "center",
+                        }}
+                        theme={"dark"}
+                        switchToActiveChain={true}
+                        modalSize={"wide"}
+                        welcomeScreen={{
+                          img: {
+                            src: "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/pangearnd.png",
+                            width: 150,
+                            height: 150,
+                          },
+                          title: "Continue to Pangea ",
+                        }}
+                        modalTitleIconUrl={
+                          "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/pangeaaLogo.png"
+                        }
+
+                      />
+                    </div>
+
+                              <p className="contract">
+                                Webpage Created by InHaus Development
+                              </p>
+
+         </section>
 </div>
 </main>
   );

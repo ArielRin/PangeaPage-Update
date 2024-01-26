@@ -363,7 +363,7 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px; /* Adjust the gap as needed */
+    gap: 1px; /* Adjust the gap as needed */
 }
 
 .team-member {
@@ -374,7 +374,7 @@ body {
 }
 
 .team-member-image {
-    width: 150px; /* Adjust the size as needed */
+    width: 100px; /* Adjust the size as needed */
     height: auto;
     border-radius: 50%; /* Optional: for circular images */
 }
@@ -464,4 +464,17 @@ button:hover {
 
 .button-link:hover {
   background-color: #8cd7ff; /* Darker blue on hover */
+}
+
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.social-icon {
+  width: 20px;
+  height: auto;
+  margin-right: 14px;
 }
