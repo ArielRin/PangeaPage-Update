@@ -72,15 +72,6 @@ Pangea symbolizes unity and connection, derived from ancient Greek, meaning "all
  - Connect button for add tokens to wallet
 
 
-### New and updated links to add
-- Contract: 0xd8b9e0993fce7d05b3f11d828cf52d17637142ca
-- Buy Token Link PCS: https://pancakeswap.finance/swap?outputCurrency=0xd8b9e0993fce7d05b3f11d828cf52d17637142ca&chainId=56
-- Add LP Link PCS: https://pancakeswap.finance/v2/add/BNB/0xd8b9e0993fce7d05b3f11d828cf52d17637142ca
-- Mint NFTS: https://pangealasvegas.com/#/main/mint
-- Swapper Address: ??
-- Token logo will be: https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/token1.jpg
-- Git: https://github.com/ArielRin/PangeaPage-Update (this)
-
 
 Layout based on:
 - Introduction
