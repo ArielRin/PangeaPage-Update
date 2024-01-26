@@ -68,6 +68,13 @@
   font-size: 1.0rem;
 }
 
+.contract {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  font-size: 0.8rem;
+}
+
 .code {
   background: #555;
   border-radius: 5px;

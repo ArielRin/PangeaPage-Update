@@ -3,11 +3,50 @@ import React, { useEffect, useState } from 'react';
 
 import "./styles/Home.css";
 
-const TOKEN_ADDRESS = '0xd8b9e0993fce7d05b3f11d828cf52d17637142ca '; //og pangea ca
+const TOKEN_ADDRESS = '0xd8b9e0993fce7d05b3f11d828cf52d17637142ca'; //og pangea ca
 // import abiFile from './abiFile.json';
+const TOKEN_IMAGE = './pangearnd.png';
+const TOKEN_SYMBOL = 'PRT';
+const TOKEN_DECIMALS = 18;
+
 const INITIAL_SUPPLY = 1000000; // Initial supply set at 1,000,000
 
 export default function Home() {
+
+// add token to metamask
+// ##############################################################
+// ##############################################################
+const handleAddToken = () => {
+   if (window.ethereum) {
+     window.ethereum.request({
+       method: 'wallet_watchAsset',
+       params: {
+         type: 'ERC20',
+         options: {
+           address: TOKEN_ADDRESS,
+           symbol: TOKEN_SYMBOL,
+           decimals: TOKEN_DECIMALS,
+           image: TOKEN_IMAGE,
+         },
+       },
+     })
+     .then((success) => {
+       if (success) {
+         console.log('Token successfully added to wallet!');
+       } else {
+         console.log('Token not added to wallet.');
+       }
+     })
+     .catch(console.error);
+   } else {
+     console.log('MetaMask is not installed!');
+   }
+ };
+ // ##############################################################
+ // ##############################################################
+
+
+
 
 
 //fetch token pricePerToken in usd PRT
@@ -72,9 +111,26 @@ const [totalSupply, setTotalSupply] = useState('Loading...');
   }, []);
 // ##############################################################
 // ##############################################################
-//
 
+// copy token address to memory
+// ##############################################################
+// ##############################################################
+const [copySuccess, setCopySuccess] = useState('');
 
+const copyToClipboard = () => {
+  navigator.clipboard.writeText(TOKEN_ADDRESS)
+    .then(() => {
+      setCopySuccess('Address Copied!');
+      setTimeout(() => setCopySuccess(''), 2000); // Clear message after 2 seconds
+    })
+    .catch(err => {
+      console.error('Failed to copy: ', err);
+      setCopySuccess('Failed to copy');
+    });
+};
+
+// ##############################################################
+// ##############################################################
   return (
 
     <main className="main">
@@ -95,6 +151,10 @@ const [totalSupply, setTotalSupply] = useState('Loading...');
           <p className="description">
             Unlock rewards: Ama Lounge NFT token offers 9% BNB rewards with low taxes. Join now!
           </p>
+          <p className="contract">
+            PangeaRewardsToken Contract: 0xd8b9e0993fce7d05b3f11d828cf52d17637142ca
+          </p>
+
 
 
 
@@ -126,16 +186,6 @@ const [totalSupply, setTotalSupply] = useState('Loading...');
         <p className="descriptionsml">
            Current Price of $PRT: {tokenPriceUSD}
         </p>
-
-      <p className="descriptionsml">
-        Initial Supply: {INITIAL_SUPPLY.toLocaleString()}
-      </p>
-      <p className="descriptionsml">
-                 Remaining Supply: {totalSupply}
-      </p>
-      <p className="descriptionsml">
-                   Tokens Removed from Supply: {tokensRemoved}
-      </p>
 
 
         </div>
@@ -187,6 +237,17 @@ const [totalSupply, setTotalSupply] = useState('Loading...');
           <p className="descriptionsml">
             6% on buys 4% in bnb rewards 1% to liquidity 1% to buy back and burn threshold to burn will be 500 tokens. 7% on sells 4% in bnb rewards 1% to nft holders that hold 50.00 in tokens 1% to liquidity 1% to buy back and burn threshold to burn 500 tokens.
           </p>
+
+
+        <p className="descriptionsml">
+          Initial Supply: {INITIAL_SUPPLY.toLocaleString()}
+        </p>
+        <p className="descriptionsml">
+                   Remaining Supply: {totalSupply}
+        </p>
+        <p className="descriptionsml">
+                     Tokens Removed from Supply: {tokensRemoved}
+        </p>
 
 
           <p className="description">
@@ -245,7 +306,17 @@ const [totalSupply, setTotalSupply] = useState('Loading...');
          rel="noopener noreferrer">
         Github
       </a></p>
+      <p><a href="https://bscscan.com/token/0xd8b9e0993fce7d05b3f11d828cf52d17637142ca#code"
+         target="_blank"
+         rel="noopener noreferrer">
+        BSC Scan
+      </a></p>
+      <button onClick={copyToClipboard}>Copy Address</button>
+        {copySuccess && <div>{copySuccess}</div>}
 
+              <button onClick={handleAddToken}>
+                Add Token to Wallet
+              </button>
         </div>
 
       </div>

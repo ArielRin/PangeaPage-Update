@@ -7,6 +7,11 @@ Welcome to the [Pangea Las Vegas Lounge](https://pangealasvegas.com/#/home). Our
 ### Contract Address
 `0xd8b9e0993fce7d05b3f11d828cf52d17637142ca`
 
+
+In development link to webpage update progress https://friendly-lebkuchen-8135c2.netlify.app/
+
+
+
 [Buy Token](https://pancakeswap.finance/swap?outputCurrency=0xd8b9e0993fce7d05b3f11d828cf52d17637142ca&chainId=56)
 
 [Mint NFT](https://pangealasvegas.com/#/main/mint)
@@ -15,7 +20,7 @@ Welcome to the [Pangea Las Vegas Lounge](https://pangealasvegas.com/#/home). Our
 
 [Dex Screener](https://dexscreener.com/bsc/0xad80fdc107d983cd76bec153abc00ff00e3477de)
 
-In development link to progress https://friendly-lebkuchen-8135c2.netlify.app/
+In development link to webpage update progress https://friendly-lebkuchen-8135c2.netlify.app/
 
 ## About
 At Ama Lounge, we offer a unique token providing substantial returns, including an extra 1% reward in BNB on every sell transaction, with an overall 9% reward in BNB.
