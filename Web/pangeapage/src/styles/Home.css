@@ -150,3 +150,36 @@
 .logo img {
   filter: invert(1);
 }
+
+
+
+  /* NAVBAR CSS*/
+.navbar {
+  /* Additional styles if needed, e.g., background color */
+  background-color: #333; /* Example background color */
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white; /* Set text color to white */
+  /* Additional styling for links */
+}
+
+.nav-links li a:hover {
+  color: #017bff; /* Color change on hover, if desired */
+  /* Other hover effects */
+}
