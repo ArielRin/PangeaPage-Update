@@ -186,13 +186,13 @@ const copyToClipboard = () => {
     <p><a href="https://github.com/ArielRin/PangeaPage-Update/blob/master/readme.md#to-do--next-update"
        target="_blank"
        rel="noopener noreferrer">
-      **** DRAFT ONLY **** 
+      **** Text Based DRAFT ONLY ****
     </a></p>
 
-  <p><a href="https://github.com/ArielRin/PangeaPage-Update/blob/master/readme.md#to-do--next-update"
+  <p><a href="https://github.com/ArielRin/PangeaPage-Update/commits/master/"
      target="_blank"
      rel="noopener noreferrer">
-    webpage update development readme here
+    Check webpage update progress
   </a></p>
         <div className="header">
           <h1 className="title">
