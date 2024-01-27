@@ -413,19 +413,6 @@ body {
     gap: 2px; /* Adjust the gap as needed */
 }
 
-.partner-logo {
-    flex: 1 1 200px; /* Adjust the flex-basis to change the breakpoint */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px 0;
-}
-
-.partner-logo-image {
-    width: 100%; /* Adjust the size as needed */
-    max-width: 75px; /* Reduced maximum size of logos by 50% */
-    height: auto;
-}
 
 .button2{
     background-color: #ff6b09; /* Blue background */
@@ -533,8 +520,77 @@ a:link, a:visited, a:hover, a:active {
     height: auto;
 }
 
-/* Keyframes for floating animation */
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+
+
+
+
+
+
+
+
+/* Existing styles for partner logos */
+.partner-logo {
+    /* Your existing styles... */
+}
+
+/* Styles for smaller devices */
+@media (max-width: 768px) { /* Adjust the max-width as needed for your design */
+    .partner-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around; /* Adjust spacing between logos */
+    }
+
+    .partner-logo {
+        flex: 1 1 200px; /* Adjust the flex-basis to change the breakpoint */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+    }
+}
+
+
+.partner-logo-image {
+    width: 100%; /* Adjust the size as needed */
+    max-width: 75px; /* Reduced maximum size of logos by 50% */
+    height: auto;
+}
+
+
+
+/* Container for the section */
+.section-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to wrap onto the next line on smaller screens */
+    justify-content: space-between; /* Adjusts spacing between columns */
+}
+
+/* Individual columns */
+.column {
+    flex: 1 1 40%; /* Each column takes up 45% of the container, adjust as needed */
+    margin: 10px; /* Spacing around each column */
+    display: flex; /* Makes the column a flex container */
+    flex-direction: column; /* Aligns children of the column in a column layout */
+    min-height: 450px; /* Ensures each column has a minimum height of 450px */
+}
+
+/* Styles for smaller devices */
+@media (max-width: 768px) { /* Adjust as needed */
+    .column {
+        flex: 1 1 100%; /* Each column takes full width on small screens */
+    }
+}
+
+.token-icon-container {
+  display: flex;
+  justify-content: center; /* Centers children horizontally */
+  align-items: center; /* Centers children vertically, if needed */
+}
+
+.token-icon {
+  width: 220px;
+  height: auto;
+  margin-right: 14px;
+  margin-bottom: 40px;
 }
