@@ -512,14 +512,14 @@ useEffect(() => {
                         modalSize={"wide"}
                         welcomeScreen={{
                           img: {
-                            src: "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/pangeatoken.png",
+                            src: "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Web/pangeapage/src/pangeatoken.png",
                             width: 150,
                             height: 150,
                           },
                           title: "Continue to Pangea ",
                         }}
                         modalTitleIconUrl={
-                          "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/pangeaaLogo.png"
+                          "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Web/pangeapage/src/pangeatoken.png"
                         }
 
                       />
