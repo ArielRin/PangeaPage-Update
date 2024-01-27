@@ -8,7 +8,9 @@ Welcome to the [Pangea Las Vegas Lounge](https://pangealasvegas.com/#/home). Our
 `0xd8b9e0993fce7d05b3f11d828cf52d17637142ca`
 
 
-In development link to webpage update progress https://friendly-lebkuchen-8135c2.netlify.app/
+
+
+In development link to webpage update progress http://www2.pangearewardstoken.com/
 
 
 
@@ -19,8 +21,6 @@ In development link to webpage update progress https://friendly-lebkuchen-8135c2
 [Add LP](https://pancakeswap.finance/v2/add/BNB/0xd8b9e0993fce7d05b3f11d828cf52d17637142ca)
 
 [Dex Screener](https://dexscreener.com/bsc/0xad80fdc107d983cd76bec153abc00ff00e3477de)
-
-In development link to webpage update progress https://friendly-lebkuchen-8135c2.netlify.app/
 
 ## About
 At Ama Lounge, we offer a unique token providing substantial returns, including an extra 1% reward in BNB on every sell transaction, with an overall 9% reward in BNB.
@@ -60,9 +60,7 @@ Pangea symbolizes unity and connection, derived from ancient Greek, meaning "all
  - Layout design for webpage (to be discussed)
  - artwork (to be provided)
  - colour style and or palette for design (to be discussed)
- - Information and other text for page to source from current and requirements (to be discussed)
- - Meet the team section use current images as excellent already
- - Hosting (in progress)
+   
 
 # Completed so far
  - contract links exchanges charts and links for lp add and token buys
@@ -70,6 +68,10 @@ Pangea symbolizes unity and connection, derived from ancient Greek, meaning "all
  - tokenomics for PRT (name and symbol to source from bscscan)
  - Social links and ama links
  - Connect button for add tokens to wallet
+ - Hosting (in progress)
+ - Meet the team section use current images as excellent already
+ - Information and other text for page to source from current and requirements (to be discussed)
+
 
 
 
