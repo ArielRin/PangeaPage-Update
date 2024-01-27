@@ -60,9 +60,7 @@ Pangea symbolizes unity and connection, derived from ancient Greek, meaning "all
  - Layout design for webpage (to be discussed)
  - artwork (to be provided)
  - colour style and or palette for design (to be discussed)
- - Information and other text for page to source from current and requirements (to be discussed)
- - Meet the team section use current images as excellent already
- - Hosting (in progress)
+   
 
 # Completed so far
  - contract links exchanges charts and links for lp add and token buys
@@ -70,6 +68,10 @@ Pangea symbolizes unity and connection, derived from ancient Greek, meaning "all
  - tokenomics for PRT (name and symbol to source from bscscan)
  - Social links and ama links
  - Connect button for add tokens to wallet
+ - Hosting (in progress)
+ - Meet the team section use current images as excellent already
+ - Information and other text for page to source from current and requirements (to be discussed)
+
 
 
 
