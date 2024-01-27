@@ -602,3 +602,10 @@ a:link, a:visited, a:hover, a:active {
   margin-right: 14px;
   margin-bottom: 40px;
 }
+
+
+
+.xyz-in {
+    width: 50%; /* Reduce the width to 50% of its original size */
+    height: auto; /* Maintain the aspect ratio */
+}

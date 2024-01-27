@@ -1,6 +1,7 @@
 import { ConnectWallet } from "@thirdweb-dev/react";
 import React, { useEffect, useState } from 'react';
 import CountUp from 'react-countup';
+import '@animxyz/core';
 
 
 import "./styles/Home.css";
@@ -30,6 +31,7 @@ import twitterImage from './images/twitter.png';
 import telegramImage from './images/telegram.png';
 import binanceImage from './images/binance.png';
 import githubImage from './images/github.png';
+import inHausImage from './images/dh_clear.png';
 
 import nft1 from './images/NFT_Pangea-1.jpg';
 import nft2 from './images/NFT_Pangea-2.jpg';
@@ -304,6 +306,7 @@ useEffect(() => {
         </div>
         </div>
 
+
      <div class="section-container">
     <div class="column">
 
@@ -489,6 +492,9 @@ useEffect(() => {
                   <a href="https://github.com/ArielRin/PangeaPage-Update" target="_blank" rel="noopener noreferrer">
                   <img src={githubImage} alt="GitHub" className="social-icon" />
                   </a>
+                  <a href="https://t.me/InHausDevelopment/1" target="_blank" rel="noopener noreferrer">
+                  <img src={inHausImage} alt="InHaus" className="social-icon" />
+                  </a>
                   </div>
 
 
@@ -529,19 +535,6 @@ useEffect(() => {
 
 
 
-                        <p className="contract"><a href="https://github.com/ArielRin/PangeaPage-Update/blob/master/readme.md#to-do--next-update"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                          **** DRAFT ONLY ****
-                        </a></p>
-
-                      <p className="contract"><a href="https://github.com/ArielRin/PangeaPage-Update/commits/master/"
-                         target="_blank"
-                         rel="noopener noreferrer">
-                        Check progress here
-                      </a></p>
-
-
                     <p className="contract">
                         <a href="https://t.me/InHausDevelopment/1"
                            target="_blank"
@@ -561,6 +554,19 @@ useEffect(() => {
 
 
 
+
+                      //
+                      //   <p className="contract"><a href="https://github.com/ArielRin/PangeaPage-Update/blob/master/readme.md#to-do--next-update"
+                      //      target="_blank"
+                      //      rel="noopener noreferrer">
+                      //     **** DRAFT ONLY ****
+                      //   </a></p>
+                      //
+                      // <p className="contract"><a href="https://github.com/ArielRin/PangeaPage-Update/commits/master/"
+                      //    target="_blank"
+                      //    rel="noopener noreferrer">
+                      //   Check progress here
+                      // </a></p>
 //
 // <div className="banner-container">
 //   <img src={bannerImage} alt="Banner" className="banner-image" />
