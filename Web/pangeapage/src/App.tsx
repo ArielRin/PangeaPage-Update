@@ -8,7 +8,7 @@ import "./styles/Home.css";
 const TOKEN_ADDRESS = '0xd8b9e0993fce7d05b3f11d828cf52d17637142ca'; //og pangea ca
 
 // import abiFile from './abiFile.json';
-const TOKEN_IMAGE = 'https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Web/pangeapage/src/images/pangeatoken.png';
+const TOKEN_IMAGE = 'https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Web/pangeapage/src/pangeatoken.png';
 const TOKEN_SYMBOL = 'PRT';
 const TOKEN_DECIMALS = 18;
 
@@ -69,7 +69,7 @@ const handleAddToken = () => {
           address: TOKEN_ADDRESS,
           symbol: TOKEN_SYMBOL,
           decimals: TOKEN_DECIMALS,
-          image: 'https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Web/pangeapage/src/pangearnd.png',
+          image: 'https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Web/pangeapage/src/pangeatoken.png',
         },
       },
     })
