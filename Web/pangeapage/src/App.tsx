@@ -8,7 +8,7 @@ import "./styles/Home.css";
 const TOKEN_ADDRESS = '0xd8b9e0993fce7d05b3f11d828cf52d17637142ca'; //og pangea ca
 
 // import abiFile from './abiFile.json';
-const TOKEN_IMAGE = 'https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Web/pangeapage/src/pangearnd.png';
+const TOKEN_IMAGE = 'https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Web/pangeapage/src/pangeatoken.png';
 const TOKEN_SYMBOL = 'PRT';
 const TOKEN_DECIMALS = 18;
 
@@ -69,7 +69,7 @@ const handleAddToken = () => {
           address: TOKEN_ADDRESS,
           symbol: TOKEN_SYMBOL,
           decimals: TOKEN_DECIMALS,
-          image: 'https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Web/pangeapage/src/pangearnd.png',
+          image: 'https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Web/pangeapage/src/pangeatoken.png',
         },
       },
     })
@@ -99,7 +99,7 @@ const handleAddToken = () => {
               address: TOKEN_ADDRESS,
               symbol: TOKEN_SYMBOL,
               decimals: TOKEN_DECIMALS,
-              image: 'https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Web/pangeapage/src/pangearnd.png',
+              image: 'https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Web/pangeapage/src/pangeatoken.png',
             },
           },
         });
@@ -288,18 +288,20 @@ useEffect(() => {
 
         <div className="header">
           <h1 className="title">
-            Maximize Investments with Pangea Rewards.
+            Maximize Investments with Pangea Rewards Token.
           </h1>
           <p className="outlined-text2 ">
             Experience Exclusive Benefits: Get 9% BNB returns with minimal tax impact through Pangea Rewards. Join now!
           </p>
 
+          <div class="headermargin">
                     <a href="https://pancakeswap.finance/swap?outputCurrency=0xd8B9E0993fce7d05b3F11D828Cf52D17637142Ca" target="_blank" rel="noopener noreferrer" className="button-link">
             Buy Tokens
           </a>
           <a href="https://pangealasvegas.com/#/main/mint" target="_blank" rel="noopener noreferrer" className="button2">
             Mint NFTs
           </a>
+        </div>
         </div>
 
      <div class="section-container">
@@ -348,7 +350,7 @@ useEffect(() => {
                    Current Market Cap: {marketCap}
               </p>
               <p className="descriptiontoken">
-                   Total Liquidity: {totalLiquidityUSD}
+                   Total Liquidity: {totalLiquidityUSD} USD Value
               </p>
               <p className="descriptionsml">
                   For purchases, enjoy a 6% allocation with 4% in BNB rewards, 1% contributed to liquidity, and 1% for buybacks and token burning (triggered at a 500-token threshold). On sales, benefit from a 7% distribution, including 4% in BNB rewards, 1% shared with NFT holders maintaining $50.00 in tokens, 1% towards liquidity, and another 1% for buybacks and burning, also activated at 500 tokens.
@@ -356,13 +358,13 @@ useEffect(() => {
 
 
               <p className="descriptionsmlnsapce">
-                  Initial Supply: {INITIAL_SUPPLY.toLocaleString()}
+                  Starting Supply: {INITIAL_SUPPLY.toLocaleString()}
+              </p>
+              <p className="descriptionsmlnsapce">
+                  Tokens Destroyed: {tokensRemoved}
               </p>
               <p className="descriptionsmlnsapce">
                  Remaining Supply: {totalSupply}
-              </p>
-              <p className="descriptionsmlnsapce">
-                         Tokens Removed from Supply: {tokensRemoved}
               </p>
               <button className="button2" onClick={addTokenToWallet}>
                 Add Token to Wallet
@@ -510,7 +512,7 @@ useEffect(() => {
                         modalSize={"wide"}
                         welcomeScreen={{
                           img: {
-                            src: "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/pangearnd.png",
+                            src: "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Images/pangeatoken.png",
                             width: 150,
                             height: 150,
                           },
