@@ -17,16 +17,23 @@ import bannerImage from './images/banner1.png'; //
 import gregImage from './images/greg.jpg'; //
 import mattImage from './images/matt.jpg';
 import backgroundImage from './images/bkg.png';
+
 import logo3 from './images/3.png';
 import logo5 from './images/5.png';
 import logo6 from './images/6.png';
 import logoBitv from './images/bitv.png'; //
 import logoSmart from './images/smart.png'; //
 import logoDh from './images/dh.png';    //
+
 import twitterImage from './images/twitter.png';
 import telegramImage from './images/telegram.png';
 import binanceImage from './images/binance.png';
 import githubImage from './images/github.png';
+
+import nft1 from './images/NFT_Pangea-1.jpg';
+import nft2 from './images/NFT_Pangea-2.jpg';
+import nft3 from './images/NFT_Pangea-3.jpg';
+
 
 
 
@@ -194,6 +201,72 @@ const copyToClipboard = () => {
 
 // ##############################################################
 // ##############################################################
+
+// fetch marketcap from api
+// ##############################################################
+// ##############################################################
+const [marketCap, setMarketCap] = useState('Loading...');
+const [totalReserveInUSD, setTotalReserveInUSD] = useState('Loading...');
+
+// ... (existing useEffect hooks)
+
+// Fetch Market Cap and Total Reserve data
+useEffect(() => {
+  const url = "https://api.geckoterminal.com/api/v2/networks/bsc/tokens/0xd8b9e0993fce7d05b3f11d828cf52d17637142ca";
+
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      if (data && data.data && data.data.attributes) {
+        if (data.data.attributes.fdv_usd) {
+          const fdvUsd = data.data.attributes.fdv_usd;
+          setMarketCap(`${parseFloat(fdvUsd).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}`); // Format as currency
+        } else {
+          setMarketCap('Market Cap not available');
+        }
+
+        if (data.data.attributes.total_reserve_in_usd) {
+          const reserveUsd = data.data.attributes.total_reserve_in_usd;
+          setTotalReserveInUSD(`${parseFloat(reserveUsd).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}`); // Format as currency
+        } else {
+          setTotalReserveInUSD('Total Reserve not available');
+        }
+      } else {
+        setMarketCap('Data not available');
+        setTotalReserveInUSD('Data not available');
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+      setMarketCap('Error fetching data');
+      setTotalReserveInUSD('Error fetching data');
+    });
+}, []);
+  // ##############################################################
+  // ##############################################################
+
+
+    // ##############################################################
+    // ##############################################################
+
+const [totalLiquidityUSD, setTotalLiquidityUSD] = useState('Loading...');
+
+useEffect(() => {
+  if (totalReserveInUSD !== 'Loading...' && totalReserveInUSD !== 'Total Reserve not available' && totalReserveInUSD !== 'Error fetching data') {
+    // Extract the number from the formatted currency string
+    const reserveValue = Number(totalReserveInUSD.replace(/[^0-9.-]+/g, ""));
+    const liquidityValue = reserveValue * 2;
+    setTotalLiquidityUSD(`${liquidityValue.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}`); // Format as currency
+  }
+}, [totalReserveInUSD]); // Dependency on totalReserveInUSD
+
+
+
+
+
+
+
+
   return (
     <main className="main">
   <div style={appStyle}>
@@ -266,6 +339,12 @@ const copyToClipboard = () => {
           <p className="descriptiontoken">
                Current Value: ${tokenPriceUSD}
           </p>
+          <p className="descriptiontoken">
+               Current Market Cap: {marketCap}
+          </p>
+          <p className="descriptiontoken">
+               Total Liquidity: {totalLiquidityUSD}
+          </p>
           <p className="descriptionsml">
               For purchases, enjoy a 6% allocation with 4% in BNB rewards, 1% contributed to liquidity, and 1% for buybacks and token burning (triggered at a 500-token threshold). On sales, benefit from a 7% distribution, including 4% in BNB rewards, 1% shared with NFT holders maintaining $50.00 in tokens, 1% towards liquidity, and another 1% for buybacks and burning, also activated at 500 tokens.
           </p>
@@ -315,6 +394,10 @@ const copyToClipboard = () => {
           <a href="https://pangealasvegas.com/#/main/mint" target="_blank" rel="noopener noreferrer" className="button-link">
   Mint NFTs
 </a>
+
+     <p className="outlined-text2 ">
+
+     </p>
      </section>
 
       {/* Partners Section */}
@@ -430,10 +513,16 @@ const copyToClipboard = () => {
 
                       />
                     </div>
+                    <p className="contract">
+                        <a href="https://t.me/InHausDevelopment/1"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           >
+                        Webpage Created by InHaus Development 2024
+                        </a>
+                    </p>
 
-                              <p className="contract">
-                                Webpage Created by InHaus Development 2024
-                              </p>
+
 
          </section>
 </div>
