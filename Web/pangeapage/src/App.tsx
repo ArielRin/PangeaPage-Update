@@ -1,4 +1,4 @@
-import { ConnectWallet } from "@thirdweb-dev/react";
+import { ConnectWallet, Web3Button } from "@thirdweb-dev/react";
 import React, { useEffect, useState } from 'react';
 import CountUp from 'react-countup';
 import '@animxyz/core';
@@ -7,8 +7,10 @@ import '@animxyz/core';
 import "./styles/Home.css";
 
 const TOKEN_ADDRESS = '0xd8b9e0993fce7d05b3f11d828cf52d17637142ca'; //og pangea ca
+const contractAddress = '0xd8b9e0993fce7d05b3f11d828cf52d17637142ca'; // Replace with your contract address
 
-// import abiFile from './abiFile.json';
+
+import contractABI from './abiFile.json';
 const TOKEN_IMAGE = 'https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Web/pangeapage/src/pangeatoken.png';
 const TOKEN_SYMBOL = 'PRT';
 const TOKEN_DECIMALS = 18;
@@ -18,7 +20,7 @@ const INITIAL_SUPPLY = 1000000; //  set at 1,000,000
 import bannerImage from './images/banner1.png'; //
 import gregImage from './images/greg.jpg'; //
 import mattImage from './images/matt.jpg';
-import backgroundImage from './images/bkg.gif';
+import backgroundImage from './images/bkg.png';
 
 import logo3 from './images/3.png';
 import logo5 from './images/5.png';
@@ -45,6 +47,11 @@ import pangeaToken from './images/pangea.png';
 
 export default function Home() {
 
+
+
+
+      // ##############################################################
+      // ##############################################################
   const appStyle = {
       backgroundImage: `url(${backgroundImage})`,
       backgroundSize: 'cover',
@@ -54,8 +61,11 @@ export default function Home() {
 
     };
 
+// ##############################################################
+// ##############################################################
 
-
+// ##############################################################
+// ##############################################################
 
 
 // add token to metamask
@@ -293,7 +303,7 @@ useEffect(() => {
             Maximize Investments with Pangea Rewards Token.
           </h1>
           <p className="outlined-text2 ">
-            Experience Exclusive Benefits: Get 9% BNB returns with minimal tax impact through Pangea Rewards. Join now!
+            Experience Exclusive Benefits: Receive up to 9% in BNB returns with minimal tax impact through Pangea Rewards. Join now!
           </p>
 
           <div class="headermargin">
@@ -303,6 +313,9 @@ useEffect(() => {
           <a href="https://pangealasvegas.com/#/main/mint" target="_blank" rel="noopener noreferrer" className="button2">
             Mint NFTs
           </a>
+
+
+
         </div>
         </div>
 
@@ -317,8 +330,7 @@ useEffect(() => {
                  Welcome
               </p>
               <p className="descriptionsml">
-              Exclusive rewards await you. Our Pangea Rewards Token (PRT) holders enjoy a unique 9% return in BNB, including an additional 1% bonus on each sale. This high-yield benefit is coupled with low tax implications, ensuring your gains are maximized without heavy tax burdens. Our exclusive lounge is more than just an investment; it's an elite experience.
-              Accessing these privileges is simple. Just own our exclusive NFT and hold a minimum of $50 in PRT. This small investment opens doors to higher BNB rewards and a smart financial journey in our community. Join us with a $50 PRT investment, secure your NFT, and start enjoying an enhanced 9% return in BNB on your transactions, all with the assurance of minimized taxes.
+              Welcome to Pangea Rewards Token. We are one of the most stable tokens in the Binance Smart Chain. We offer up to 9% in Bnb rewards and have ways to reward holders that others don't. We are tied with Crypto and Life Lounge and when there are open mics or amas there we give away some tokens to those that can answer questions quickly. When those people sell, we buyback to cover the amount, this increasing volume and rewards to all of our holders. Additionally the new nft collection is very affordable and offers a way for anyone to earn passive income in usdt bep20. We are paying 6% a month which is more than you will earn at any bank. This is paid out weekly on the dollar value of nfts you hold. There is a hold requirement of 20.00 in prt to use this option.
               </p>
 
               <div class="token-icon-container">
@@ -379,6 +391,20 @@ useEffect(() => {
 </div>
 
 
+<section id="about" className="partner-section">
+    <p className="outlined-text2">
+       Pangea Rewards
+    </p>
+    <p className="descriptionsml">
+
+    Daily giveaways for a minimum 5.00 buy. When you make a purchase of atleast 5.00 you will be eligible to win your buy up to 5 000 tokens. The dev is the largest holder of the token and does not sell on holders. All project wallets are pinned in the telegram channel to be completely transparent.
+    We are committed to helping you earn passive income and make gains in the crypto space. Someone is always around to answer any questions you have in the telegram channel.
+
+    </p>
+
+
+</section>
+
 
 <section id="tokenlinks" className="black-section">
    <div className="link-container">
@@ -390,7 +416,7 @@ useEffect(() => {
 </section>
 
 
-     <div id="dexscreener-embed">
+     <div className="dexscreener-embed" id="dexscreener-embed">
         <iframe
           src="https://dexscreener.com/bsc/0xaD80FDC107d983Cd76BEc153abC00ff00E3477DE?embed=1&theme=dark&trades=0&info=0"
           title="DexScreener"
@@ -404,8 +430,10 @@ useEffect(() => {
             Pangea NFT Collection
           </p>
           <p className="descriptionsml">
-            The Pangea Las Vegas Lounge NFT series showcases a stunning falcon perched on a globe. Owning these NFTs brings continuous rewards simply for holding them. This collection represents a fusion of art and innovation, providing owners with exclusive benefits such as VIP experiences. Become a part of this community today to acquire a distinctive artwork and enjoy ongoing rewards. Additionally, 1% of sales proceeds are distributed to NFT holders. Each NFT is priced at $50.00, and holders are also required to maintain a $50.00 holding in Pangea tokens.
-          </p>
+          When you mint our nfts they entitle you to a passive income stream. 25.00 from each mint will pay you 6% in usdt monthly forever.
+          You will also receive 10.00 worth of tokens and 5.00 will be used to wrap tokens for liquidity
+          The more nfts you hold the more passive income you receive
+          In addition if you hold 50.00 in PRT tokens you get an extra 1% on all sells          </p>
           <a href="https://pangealasvegas.com/#/main/mint" target="_blank" rel="noopener noreferrer" className="button-link">
   Mint NFTs
 </a>
@@ -413,7 +441,24 @@ useEffect(() => {
      <p className="outlined-text2 ">
 
      </p>
+
      </section>
+
+
+
+               <section id="new-section" className="new-section">
+  <div className="column-container">
+    <div className="flex-column" style={{backgroundImage: `url(${nft1})`}}>
+      {/* Optional content for column 1 */}
+    </div>
+    <div className="flex-column" style={{backgroundImage: `url(${nft2})`}}>
+      {/* Optional content for column 2 */}
+    </div>
+    <div className="flex-column" style={{backgroundImage: `url(${nft3})`}}>
+      {/* Optional content for column 3 */}
+    </div>
+  </div>
+</section>
 
       {/* Partners Section */}
      <section id="partners" className="black-section">
@@ -432,12 +477,6 @@ useEffect(() => {
              </div>
              <div className="partner-logo">
                  <img src={logo6} alt="Partner Logo 6" className="partner-logo-image" />
-             </div>
-             <div className="partner-logo">
-                 <img src={logoBitv} alt="Partner Logo Bitv" className="partner-logo-image" />
-             </div>
-             <div className="partner-logo">
-                 <img src={logoSmart} alt="Partner Logo Smart" className="partner-logo-image" />
              </div>
              <div className="partner-logo">
                  <img src={logoDh} alt="Partner Logo Dh" className="partner-logo-image" />
@@ -509,6 +548,7 @@ useEffect(() => {
 
                     <div className="connect">
                       <ConnectWallet
+
                         dropdownPosition={{
                           side: "bottom",
                           align: "center",
@@ -527,12 +567,8 @@ useEffect(() => {
                         modalTitleIconUrl={
                           "https://raw.githubusercontent.com/ArielRin/PangeaPage-Update/master/Web/pangeapage/src/pangeatoken.png"
                         }
-
                       />
-
-
                     </div>
-
 
 
                     <p className="contract">
@@ -540,7 +576,7 @@ useEffect(() => {
                            target="_blank"
                            rel="noopener noreferrer"
                            >
-                        Webpage Created by InHaus Development 2024
+                        Created by InHaus Development 2024
                         </a>
                     </p>
 
@@ -571,3 +607,16 @@ useEffect(() => {
 // <div className="banner-container">
 //   <img src={bannerImage} alt="Banner" className="banner-image" />
 // </div>
+
+
+
+
+
+//
+// <div className="claim-button-container">
+//         <button onClick={handleClaim} disabled={isLoading}>
+//           {isLoading ? 'Processing...' : 'Claim Tokens'}
+//         </button>
+//         {isError && <div>Error: {error.message}</div>}
+//         {isSuccess && <div>Claim successful!</div>}
+//       </div>

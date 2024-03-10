@@ -189,6 +189,7 @@
 .navbar {
   /* Additional styles if needed, e.g., background color */
   background-color: #000; /* Example background color */
+  margin-top: 40px;
 }
 
 .nav-links {
@@ -252,7 +253,7 @@ a:hover {
 
 /* ... other styles ... */
 .nft-section, .partner-section, .footer-section, .black-section {
-  background-color: rgba(17, 16, 17, 0.8);
+  background-color: rgba(17, 16, 17, 0.9);
   color: white;
   padding: 20px;
   border-radius: 15px;
@@ -264,15 +265,25 @@ a:hover {
    Assuming .footer-section is the last one: */
 
 
+   .black-section {
+     background-color: rgba(17, 16, 17, 0.9);
+     color: white;
+     padding: 20px;
+     border-radius: 15px; /* Adjust the radius as needed */
+   }
+   /* ... other styles ... */
+
+
+
 .nft-section {
-  background-color: rgba(17, 16, 17, 0.8);
+  background-color: rgba(17, 16, 17, 0.9);
   color: white;
   padding: 20px;
   border-radius: 15px; /* Adjust the radius as needed */
 }
 
 .partner-section {
-  background-color: rgba(17, 16, 17, 0.8);
+  background-color: rgba(17, 16, 17, 0.9);
   color: white;
   padding: 20px;
   border-radius: 15px; /* Adjust the radius as needed */
@@ -292,23 +303,21 @@ a:hover {
     text-align: center; /* Center text for all child elements */
 }
 
+.dexscreener-embed {
 
-
-
-
-
-
-
-
-
-
-.black-section {
-  background-color: rgba(17, 16, 17, 0.8);
-  color: white;
   padding: 20px;
   border-radius: 15px; /* Adjust the radius as needed */
+  margin-bottom: 14.23px; /* Adds space below each section */
+
 }
-/* ... other styles ... */
+
+
+
+
+
+
+
+
 
 
 
@@ -554,7 +563,7 @@ a:link, a:visited, a:hover, a:active {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 10px 0;
+        margin: 13px 0;
     }
 }
 
@@ -563,8 +572,41 @@ a:link, a:visited, a:hover, a:active {
     width: 100%; /* Adjust the size as needed */
     max-width: 75px; /* Reduced maximum size of logos by 50% */
     height: auto;
+    margin-right: 50px;
 }
 
+
+
+
+/* Existing styles for partner logos */
+.nft-logo {
+    /* Your existing styles... */
+}
+
+/* Styles for smaller devices */
+@media (max-width: 768px) { /* Adjust the max-width as needed for your design */
+    .nft-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around; /* Adjust spacing between logos */
+    }
+
+    .nft-logo {
+        flex: 1 1 200px; /* Adjust the flex-basis to change the breakpoint */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 13px 0;
+    }
+}
+
+
+.nft-logo-image {
+    width: 100%; /* Adjust the size as needed */
+    max-width: 75px; /* Reduced maximum size of logos by 50% */
+    height: auto;
+    margin-right: 50px;
+}
 
 
 /* Container for the section */
@@ -608,4 +650,33 @@ a:link, a:visited, a:hover, a:active {
 .xyz-in {
     width: 50%; /* Reduce the width to 50% of its original size */
     height: auto; /* Maintain the aspect ratio */
+}
+
+
+.new-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.column-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px; /* Adjust based on your layout */
+  gap: 20px; /* Space between columns */
+}
+
+.flex-column {
+  flex: 1;
+  height: 400px; /* Adjust based on your needs */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff; /* For text inside the columns */
+  padding: 20px;
+  border-radius: 8px; /* Optional, for rounded corners */
 }
